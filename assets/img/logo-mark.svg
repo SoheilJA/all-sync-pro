@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="AllSyncPro mark — two interlocking rings in sync">
+  <defs>
+    <linearGradient id="mg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6E4BFF"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#06070A"/>
+  <circle cx="25" cy="32" r="17" stroke="url(#mg)" stroke-width="3"/>
+  <circle cx="39" cy="32" r="17" stroke="url(#mg)" stroke-width="3" opacity=".55"/>
+  <circle cx="32" cy="32" r="5.2" fill="url(#mg)"/>
+</svg>

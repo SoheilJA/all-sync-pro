@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en" class="theme-dark no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Theme + a11y bootstrap: runs before paint to prevent flash; the no-js
+     class is only swapped by the module bundle, so a failed module load
+     (e.g. file:// CORS) still renders every section fully visible. -->
+<script>
+(function(){try{var t=localStorage.getItem('asp-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}var d=document.documentElement;d.classList.remove('theme-dark','theme-light');d.classList.add(t==='light'?'theme-light':'theme-dark')}catch(e){document.documentElement.classList.add('theme-dark')}})();
+</script>
+<meta name="theme-color" content="#06070A">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/icon-192.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap">
+<!-- Tailwind Play CDN (pinned) — zero-build default. For production, build
+     with the Tailwind CLI instead (see README.md). -->
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script src="../tailwind.config.js"></script>
+<link rel="stylesheet" href="../assets/css/main.css">
+<title>Design Systems That Survive Reality | AllSyncPro</title>
+<meta name="description" content="Tokens, governance, and versioning — why most design systems die by version 2, and the architecture that survives contact with real teams and real deadlines.">
+<link rel="canonical" href="https://allsyncpro.com/blog/post-3.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AllSyncPro">
+<meta property="og:title" content="Design Systems That Survive Reality | AllSyncPro">
+<meta property="og:description" content="Tokens, governance, and versioning — why most design systems die by version 2, and the architecture that survives contact with real teams and real deadlines.">
+<meta property="og:url" content="https://allsyncpro.com/blog/post-3.html">
+<meta property="og:image" content="https://picsum.photos/seed/asp-blog-systems/1200/630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AllSyncPro — Design Systems That Survive Reality | AllSyncPro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design Systems That Survive Reality | AllSyncPro">
+<meta name="twitter:description" content="Tokens, governance, and versioning — why most design systems die by version 2, and the architecture that survives contact with real teams and real deadlines.">
+<meta name="twitter:image" content="https://picsum.photos/seed/asp-blog-systems/1200/630">
+<meta name="twitter:image:alt" content="AllSyncPro — Design Systems That Survive Reality | AllSyncPro">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://allsyncpro.com/#organization",
+  "name": "AllSyncPro",
+  "url": "https://allsyncpro.com/",
+  "logo": "https://allsyncpro.com/assets/img/logo.svg",
+  "slogan": "Everything, in sync.",
+  "description": "Full-service digital studio uniting strategy, identity, interface, and engineering into one synchronized system.",
+  "foundingDate": "2018",
+  "email": "hello@allsyncpro.com",
+  "telephone": "+44 20 8089 1200",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "48 Warren Street",
+    "addressLocality": "London",
+    "postalCode": "W1T 5BB",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    "https://x.com",
+    "https://linkedin.com",
+    "https://dribbble.com",
+    "https://github.com"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "hello@allsyncpro.com",
+      "telephone": "+44 20 8089 1200",
+      "availableLanguage": [
+        "English"
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://allsyncpro.com/#website",
+  "url": "https://allsyncpro.com/",
+  "name": "AllSyncPro",
+  "publisher": {
+    "@id": "https://allsyncpro.com/#organization"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://allsyncpro.com/blog.html?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://allsyncpro.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Journal",
+      "item": "https://allsyncpro.com/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Design Systems That Survive Contact With Reality",
+      "item": "https://allsyncpro.com/blog/post-3.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Design Systems That Survive Contact With Reality",
+  "description": "Tokens, governance, and versioning — why most design systems die by version 2, and the architecture that survives contact with real teams and real deadlines.",
+  "image": [
+    "https://picsum.photos/seed/asp-blog-systems/1200/630",
+    "https://picsum.photos/seed/asp-blog-systems/1600/840"
+  ],
+  "datePublished": "2026-03-18",
+  "dateModified": "2026-03-18",
+  "inLanguage": "en",
+  "wordCount": 1100,
+  "timeRequired": "PT10M",
+  "keywords": "Development, Web Design",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://allsyncpro.com/blog/post-3.html"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Sara Khalil",
+    "jobTitle": "Frontend Architect",
+    "worksFor": {
+      "@id": "https://allsyncpro.com/#organization"
+    }
+  },
+  "publisher": {
+    "@id": "https://allsyncpro.com/#organization"
+  }
+}
+</script>
+</head>
+<body class="page-post">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ===== PRELOADER (once per session) ===== -->
+<div class="preloader" data-preloader data-state="run" aria-hidden="true">
+  <div class="flex flex-col items-center gap-5 px-6 text-center">
+    <svg width="52" height="52" viewBox="0 0 32 32" fill="none" aria-hidden="true" class="anim-float">
+      <defs>
+        <linearGradient id="aspGpre" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#6E4BFF"/><stop offset="1" stop-color="#22D3EE"/>
+        </linearGradient>
+      </defs>
+      <circle cx="12.5" cy="16" r="8.5" stroke="url(#aspGpre)" stroke-width="1.4"/>
+      <circle cx="19.5" cy="16" r="8.5" stroke="url(#aspGpre)" stroke-width="1.4" opacity=".5"/>
+      <circle cx="16" cy="16" r="2.6" fill="url(#aspGpre)"/>
+    </svg>
+    <div class="flex items-baseline gap-3 font-mono text-[10px] uppercase tracking-[0.34em] text-mist">
+      <span>AllSyncPro</span><span class="text-mist/40">/ Syncing</span>
+    </div>
+    <div class="h-px w-44 overflow-hidden bg-line">
+      <div class="h-full w-full bg-gradient-to-r from-violet to-cyan" style="animation: asp-shimmer 1.4s linear infinite; background-size: 200% 100%;"></div>
+    </div>
+    <div class="font-display text-6xl font-semibold tabular-nums text-chalk" data-preloader-num>00</div>
+  </div>
+</div>
+
+<!-- ===== SCROLL PROGRESS ===== -->
+<div data-progress aria-hidden="true" class="fixed inset-x-0 top-0 z-[95] h-[2px] origin-left scale-x-0 bg-gradient-to-r from-violet via-cyan to-ember"></div>
+
+<!-- ===== PAGE TRANSITION CURTAIN ===== -->
+<div data-pt-overlay class="pt-overlay" aria-hidden="true" data-phase="idle"></div>
+
+<!-- ===================== HEADER / NAVIGATION ===================== -->
+<header data-header data-scrolled="false" class="group/header fixed inset-x-0 top-0 z-50">
+  <div class="shell-wide">
+    <div class="flex h-[4.75rem] items-center justify-between border border-transparent px-0 transition-all duration-500 ease-engineered group-data-[scrolled=true]/header:mt-3 group-data-[scrolled=true]/header:h-16 group-data-[scrolled=true]/header:rounded-2xl group-data-[scrolled=true]/header:border-line group-data-[scrolled=true]/header:bg-ink/75 group-data-[scrolled=true]/header:px-5 group-data-[scrolled=true]/header:shadow-card group-data-[scrolled=true]/header:backdrop-blur-xl">
+
+      <!-- Logo -->
+      <a href="../index.html" class="flex items-center gap-3" aria-label="AllSyncPro — home">
+        <svg width="34" height="34" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="aspG1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6E4BFF"/><stop offset="1" stop-color="#22D3EE"/>
+            </linearGradient>
+          </defs>
+          <circle cx="12.5" cy="16" r="8.5" stroke="url(#aspG1)" stroke-width="1.5"/>
+          <circle cx="19.5" cy="16" r="8.5" stroke="url(#aspG1)" stroke-width="1.5" opacity=".55"/>
+          <circle cx="16" cy="16" r="2.6" fill="url(#aspG1)"/>
+        </svg>
+        <span class="font-display text-[1.2rem] font-semibold tracking-tight text-chalk">allsync<span class="text-gradient">pro</span></span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav aria-label="Primary" class="hidden lg:block">
+        <ul class="flex items-center gap-7">
+          <li class="group relative" data-mega-wrap>
+            <button type="button" data-mega-trigger aria-expanded="false" aria-controls="mega-panel" class="nav-link">
+              Services
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true" class="transition-transform duration-300 ease-engineered group-hover:rotate-180"><path d="M2 3.5 5 6.5 8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <!-- Mega panel: opens via CSS hover/focus-within; JS syncs ARIA -->
+            <div id="mega-panel" class="pointer-events-none absolute left-1/2 top-full z-40 w-[min(64rem,88vw)] -translate-x-1/2 translate-y-3 pt-5 opacity-0 transition-all duration-500 ease-engineered group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+              <div class="card-glass overflow-hidden p-2">
+                <div class="grid grid-cols-12 gap-1">
+
+                  <!-- Flagship services -->
+                  <div class="col-span-7 grid gap-1 border-line p-2 lg:border-r">
+                    <p class="px-3 pb-1 pt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Flagship services</p>
+                    <a href="../services/web-design.html" class="group/item flex items-start gap-4 rounded-xl p-3 transition-colors duration-300 hover:bg-chalk/5">
+                      <span class="mt-0.5 grid size-11 flex-none place-items-center rounded-lg border border-line bg-elevated/70 text-plum transition-colors duration-300 group-hover/item:border-plum/50">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg>
+                      </span>
+                      <span>
+                        <span class="flex items-center gap-2 font-display text-base font-semibold text-chalk">Web Design
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" class="text-mist transition-all duration-300 group-hover/item:-translate-y-0.5 group-hover/item:translate-x-0.5 group-hover/item:text-plum"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="mt-1 block text-sm leading-relaxed text-mist">Conversion-first interfaces, art-directed and engineered to the pixel.</span>
+                      </span>
+                    </a>
+                    <a href="../services/web-development.html" class="group/item flex items-start gap-4 rounded-xl p-3 transition-colors duration-300 hover:bg-chalk/5">
+                      <span class="mt-0.5 grid size-11 flex-none place-items-center rounded-lg border border-line bg-elevated/70 text-cyan transition-colors duration-300 group-hover/item:border-plum/50">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6M16 6l6 6-6 6M13 4l-2 16"/></svg>
+                      </span>
+                      <span>
+                        <span class="flex items-center gap-2 font-display text-base font-semibold text-chalk">Web Development
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" class="text-mist transition-all duration-300 group-hover/item:-translate-y-0.5 group-hover/item:translate-x-0.5 group-hover/item:text-plum"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="mt-1 block text-sm leading-relaxed text-mist">Fast, scalable builds — from marketing sites to full platforms.</span>
+                      </span>
+                    </a>
+                  </div>
+
+                  <!-- Secondary + featured case -->
+                  <div class="col-span-5 grid content-start gap-1 p-2">
+                    <p class="px-3 pb-1 pt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Also in the studio</p>
+                    <a href="../services/graphic-design.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-mist transition-colors duration-300 hover:bg-chalk/5 hover:text-chalk">
+                      <span class="size-1.5 rounded-full bg-violet/80" aria-hidden="true"></span>Graphic Design</a>
+                    <a href="../services/logo-brand-identity.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-mist transition-colors duration-300 hover:bg-chalk/5 hover:text-chalk">
+                      <span class="size-1.5 rounded-full bg-cyan/80" aria-hidden="true"></span>Logo &amp; Brand Identity</a>
+                    <a href="../services/banner-ad-creative.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-mist transition-colors duration-300 hover:bg-chalk/5 hover:text-chalk">
+                      <span class="size-1.5 rounded-full bg-ember/80" aria-hidden="true"></span>Banner &amp; Ad Creative</a>
+
+                    <a href="../portfolio.html" class="group/case mt-3 block overflow-hidden rounded-xl border border-line">
+                      <span class="block overflow-hidden">
+                        <img src="https://picsum.photos/seed/asp-novacart-mega/640/320" width="640" height="320" alt="NovaCart replatform case study preview" loading="lazy" decoding="async" class="aspect-[2/1] w-full object-cover transition-transform duration-700 ease-engineered group-hover/case:scale-[1.04]">
+                      </span>
+                      <span class="flex items-center justify-between gap-3 border-t border-line bg-elevated/60 px-4 py-3">
+                        <span class="text-sm font-medium text-chalk">NovaCart replatform</span>
+                        <span class="font-mono text-[11px] text-cyan">+142% CVR</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between gap-4 border-t border-line px-5 py-3.5">
+                  <p class="text-sm text-mist">Not sure what you need?</p>
+                  <a href="../contact.html" class="link-arrow text-sm">Book a discovery call
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="../portfolio.html" data-nav="work" class="nav-link">Work</a></li>
+          <li><a href="../about.html" data-nav="studio" class="nav-link">Studio</a></li>
+          <li><a href="../blog.html" data-nav="journal" aria-current="page" class="nav-link">Journal</a></li>
+          <li><a href="../pricing.html" data-nav="pricing" class="nav-link">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2.5">
+        <button type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme" class="grid size-11 place-items-center rounded-full border border-line text-mist transition-all duration-300 hover:border-plum/60 hover:text-chalk">
+          <svg data-icon-sun width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.8 1.8M17.2 17.2 19 19M19 5l-1.8 1.8M6.8 17.2 5 19"/></svg>
+          <svg data-icon-moon width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="M20 13.2A8.2 8.2 0 1 1 10.8 4a6.6 6.6 0 0 0 9.2 9.2Z"/></svg>
+        </button>
+
+        <a href="../contact.html" data-magnetic="0.25" class="btn-primary hidden !px-6 !py-3 text-sm sm:inline-flex">
+          <span class="btn-label">Start a Project</span>
+          <svg class="btn-arrow" width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+        <button type="button" data-menu-open aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="grid size-11 place-items-center rounded-full border border-line text-chalk transition-colors duration-300 hover:border-plum/60 lg:hidden">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1.5 4.5h15M1.5 9h15M1.5 13.5h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MOBILE MENU ===================== -->
+<div data-mobile-menu data-open="false" role="dialog" aria-modal="true" aria-label="Menu" class="group fixed inset-0 z-[60] invisible pointer-events-none opacity-0 transition-[visibility,opacity] duration-[400ms] ease-engineered data-[open=true]:visible data-[open=true]:pointer-events-auto data-[open=true]:opacity-100 lg:hidden">
+  <div class="absolute inset-0 bg-ink/85 backdrop-blur-2xl"></div>
+  <div class="absolute inset-x-0 top-0 h-full overflow-y-auto overscroll-contain px-[var(--gutter)] pb-10 pt-24">
+    <button type="button" data-menu-close aria-label="Close menu" class="absolute right-[var(--gutter)] top-5 grid size-11 place-items-center rounded-full border border-line text-chalk transition-colors duration-300 hover:border-plum/60">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2.5 2.5 13.5 13.5M13.5 2.5 2.5 13.5"/></svg>
+    </button>
+
+    <nav aria-label="Mobile" class="flex flex-col gap-1">
+      <a href="../index.html" data-nav="home" class="nav-m-item border-b border-line py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Home</a>
+
+      <details class="nav-m-item group/srv border-b border-line py-4 transition-[transform,opacity] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">
+        <summary class="flex cursor-pointer list-none items-center justify-between font-display text-3xl font-semibold tracking-tight text-chalk transition-colors duration-300 hover:text-plum [&::-webkit-details-marker]:hidden">
+          Services
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" class="transition-transform duration-300 ease-engineered group-open/srv:rotate-45"><path d="M8 3v10M3 8h10"/></svg>
+        </summary>
+        <div class="grid gap-0.5 pb-5 pt-3">
+          <a href="../services/web-design.html" class="rounded-lg px-3 py-2.5 text-lg font-medium text-mist transition-colors hover:bg-chalk/5 hover:text-chalk">Web Design</a>
+          <a href="../services/web-development.html" class="rounded-lg px-3 py-2.5 text-lg font-medium text-mist transition-colors hover:bg-chalk/5 hover:text-chalk">Web Development</a>
+          <a href="../services/graphic-design.html" class="rounded-lg px-3 py-2.5 text-lg font-medium text-mist transition-colors hover:bg-chalk/5 hover:text-chalk">Graphic Design</a>
+          <a href="../services/logo-brand-identity.html" class="rounded-lg px-3 py-2.5 text-lg font-medium text-mist transition-colors hover:bg-chalk/5 hover:text-chalk">Logo &amp; Brand Identity</a>
+          <a href="../services/banner-ad-creative.html" class="rounded-lg px-3 py-2.5 text-lg font-medium text-mist transition-colors hover:bg-chalk/5 hover:text-chalk">Banner &amp; Ad Creative</a>
+        </div>
+      </details>
+
+      <a href="../portfolio.html" data-nav="work" class="nav-m-item border-b border-line py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Work</a>
+      <a href="../about.html" data-nav="studio" class="nav-m-item border-b border-line py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Studio</a>
+      <a href="../blog.html" data-nav="journal" aria-current="page" class="nav-m-item border-b border-line py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Journal</a>
+      <a href="../pricing.html" data-nav="pricing" class="nav-m-item border-b border-line py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Pricing</a>
+      <a href="../contact.html" data-nav="contact" class="nav-m-item py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Contact</a>
+    </nav>
+
+    <div class="mt-10 flex flex-col gap-6">
+      <a href="../contact.html" class="btn-primary w-full">
+        <span class="btn-label">Start a Project</span>
+        <svg class="btn-arrow" width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="flex items-center justify-between border-t border-line pt-6">
+        <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-mist/70">Follow the studio</p>
+        <div class="flex gap-2">
+          <a href="https://x.com" rel="noopener" aria-label="AllSyncPro on X" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L2.5 2h6.4l4.4 5.9L18.9 2Zm-1.1 18h1.7L7.9 3.7H6.1L17.8 20Z"/></svg>
+          </a>
+          <a href="https://linkedin.com" rel="noopener" aria-label="AllSyncPro on LinkedIn" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9Z"/></svg>
+          </a>
+          <a href="https://dribbble.com" rel="noopener" aria-label="AllSyncPro on Dribbble" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M5.5 6.5c4 4.4 8.9 6 13.9 6M8.5 3.3c2.7 4.9 4.2 9.6 4.6 16.6M20.6 13.9c-5.4-.6-9.7.8-13.3 4.8"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+<nav aria-label="Breadcrumb" class="shell pt-28 lg:pt-32">
+<ol class="flex flex-wrap items-center font-mono text-[11px] uppercase tracking-[0.18em] text-mist/70">
+<li><a href="../index.html" class="transition-colors hover:text-chalk">Home</a></li>
+<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mx-1 text-mist/40"><path d="m6 3 5 5-5 5"/></svg>
+<li><a href="../blog.html" class="transition-colors hover:text-chalk">Journal</a></li>
+<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mx-1 text-mist/40"><path d="m6 3 5 5-5 5"/></svg>
+<li aria-current="page"><span class="text-chalk">Design Systems That Survive Contact With Reality</span></li>
+</ol>
+</nav>
+<!-- ==================================================================
+     BLOG POST 3 — "Design Systems That Survive Contact With Reality"
+     ================================================================== -->
+
+<!-- ===== POST HEADER ===== -->
+<header class="relative overflow-hidden pb-12 pt-36 lg:pt-44" aria-labelledby="post-title">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="hero-mesh absolute inset-0 opacity-40"></div>
+    <div class="absolute left-[10%] top-[28%] h-64 w-64 glow-violet blur-3xl opacity-50"></div>
+  </div>
+  <div class="shell relative max-w-4xl">
+    <div class="flex flex-wrap items-center gap-3" data-reveal>
+      <a href="../blog.html" class="chip hover:text-chalk">Development</a>
+      <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-mist/70">18 Mar 2026</span>
+      <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-mist/70">· 10 min read</span>
+    </div>
+    <h1 id="post-title" class="mt-6 font-display text-display-lg font-semibold tracking-tight text-chalk" data-split="words">
+      Design Systems That <span class="text-gradient">Survive Contact With Reality</span>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-mist" data-reveal style="--reveal-delay:180ms">
+      Most design systems don&rsquo;t die of ugly components. They die of governance neglect &mdash; unnamed owners, drifting tokens, and a version 2 nobody asked for. This is the architecture, the versioning discipline, and the unglamorous habits that keep a system alive past its first birthday.
+    </p>
+    <div class="mt-8 flex items-center gap-4 border-t border-line pt-7" data-reveal style="--reveal-delay:260ms">
+      <img src="https://picsum.photos/seed/asp-avatar-sara/96/96" width="48" height="48" alt="Portrait of Sara Khalil" loading="lazy" decoding="async" class="size-12 rounded-full border border-line object-cover">
+      <div>
+        <p class="text-sm font-semibold text-chalk">Sara Khalil</p>
+        <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-mist/70">Frontend Architect</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== FEATURED IMAGE ===== -->
+<figure class="shell-full mb-16 mt-4" data-reveal>
+  <img src="https://picsum.photos/seed/asp-blog-systems/1600/840" width="1600" height="840" alt="Component library board with color tokens and type scales pinned to a studio wall" loading="eager" fetchpriority="high" decoding="async" class="aspect-[40/21] w-full rounded-2xl border border-line object-cover shadow-card">
+  <figcaption class="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-mist/70">Fig. 01 — A component library is the visible fifth of a system; the other four are governance</figcaption>
+</figure>
+
+<!-- ===== ARTICLE BODY + STICKY TOC ===== -->
+<div class="shell grid grid-cols-1 gap-12 pb-8 lg:grid-cols-12">
+  <aside class="order-2 lg:order-1 lg:col-span-3">
+    <nav data-toc class="sticky top-28 hidden max-h-[70vh] overflow-y-auto border-l border-line pl-5 lg:block" aria-label="Table of contents">
+      <p class="mb-4 font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">On this page</p>
+      <ul class="grid gap-3 text-sm">
+        <li><a href="#why-systems-die" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">Why systems die</a></li>
+        <li><a href="#tokens-first" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">Tokens first, always</a></li>
+        <li><a href="#governance" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">Governance or ghost town</a></li>
+        <li><a href="#versioning" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">Version like a product</a></li>
+        <li><a href="#adoption" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">Adoption is marketing</a></li>
+        <li><a href="#the-payload" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">The payload: what healthy looks like</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <article class="article-body order-1 lg:col-span-8 lg:col-start-5">
+    <p>Your design system will not die from an ugly button. Buttons get fixed; they&rsquo;re the fun part. It dies quietly, six months in, when a team needs a color that doesn&rsquo;t exist, adds <code>--blue-ish-2</code> to a local stylesheet, and nobody notices until the &ldquo;system&rdquo; is forty hex codes deep. <strong>Systems don&rsquo;t fail on craft. They fail on governance.</strong> Here is what the survivors do differently.</p>
+
+    <h2 id="why-systems-die">Why systems die</h2>
+    <p>Ask any team that buried a design system and you&rsquo;ll hear the same four autopsy results:</p>
+    <ul>
+      <li><strong>The v2 graveyard.</strong> Version 1 ships with launch energy; version 2 requires updating every consumer at once, gets deferred, and the library forks into per-team copies while it waits.</li>
+      <li><strong>No owner.</strong> Governance by committee means governance by nobody. Decisions take weeks, so teams stop asking and start hard-coding.</li>
+      <li><strong>Token drift.</strong> Every team adds names their own way. Within a year, <code>text-primary</code>, <code>text-default</code>, and <code>text-body</code> coexist with different values, and no one can say which is canonical.</li>
+      <li><strong>Docs rot.</strong> The docs site is a snapshot from launch day. It contradicts the code, so engineers learn to ignore it &mdash; then ignore the system.</li>
+    </ul>
+    <blockquote>
+      Your design system doesn&rsquo;t die when the components get old. It dies when the last person who remembers <em>why</em> a decision was made quietly moves teams.
+      <cite>— Field note from our systems practice, after 30 token migrations</cite>
+    </blockquote>
+    <p>The common thread is institutional memory, not visual quality &mdash; so the fix is architectural and organizational, starting with the names.</p>
+
+    <h2 id="tokens-first">Tokens first, always</h2>
+    <p>Components are what everyone demos, but tokens are what actually scale. A healthy architecture has three layers, each depending only on the one below it:</p>
+    <h3>Primitives</h3>
+    <p>The raw palette and scale &mdash; <code>--violet-500</code>, <code>--size-4</code>, <code>--font-body</code>. No opinions, no usage rules, never referenced directly by product code. Primitives change when the brand changes, nothing else.</p>
+    <h3>Semantic tokens</h3>
+    <p>Meaning on top of raw values &mdash; <code>--color-danger</code>, <code>--color-surface-raised</code>, <code>--space-inline-compact</code>. This is the layer product code consumes. When the brand swaps violet for teal, you re-map a handful of tokens and every screen follows.</p>
+    <h3>Component tokens</h3>
+    <p>Intent for a specific widget &mdash; <code>--button-primary-bg</code>, <code>--card-border</code>. They exist so a component can be themed without touching its internals, making white-labeling and rebrands a config change instead of a rewrite.</p>
+    <div class="callout">
+      <svg class="callout-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v12M8.5 8.5h7M8.5 11h7" stroke-linecap="round"/></svg>
+      <p><strong>Name for meaning, not appearance.</strong> <code>--color-danger</code> survives a rebrand; <code>--color-red4</code> does not. The moment a token name describes pixels instead of purpose, every future brand decision becomes an archaeology project.</p>
+    </div>
+    <p>The other half of tokens-first is mechanical: tokens live in exactly one file; everything else is generated from it. Our pipeline is deliberately boring:</p>
+    <pre class="code-block" data-lang="js"><code data-code>// build-tokens.js — one source of truth, every consumer
+import fs from "node:fs";
+import postcss from "postcss";
+
+const sheet = fs.readFileSync("src/tokens.css", "utf8");
+const root = postcss.parse(sheet).first; // the :root {} rule
+
+const tokens = {};
+root.walkDecls((decl) =&gt; {
+  if (!decl.prop.startsWith("--")) return;
+  const [group, ...rest] = decl.prop.slice(2).split("-");
+  tokens[decl.prop] = { value: decl.value, group, name: rest.join("-") };
+});
+
+// docs site, CSS linting, and Figma variables all read this one file
+fs.writeFileSync("dist/tokens.json", JSON.stringify(tokens, null, 2));
+console.log(`exported ${Object.keys(tokens).length} tokens from one source`);</code></pre>
+    <p>Fifteen lines of Node turn the canonical file into the docs site&rsquo;s data, a lint rule that fails any review referencing primitives directly, and an export for design tooling &mdash; and because every consumer is generated, none of them can drift.</p>
+
+    <figure>
+      <img src="https://picsum.photos/seed/asp-blog-tokens/1200/640" width="1200" height="640" alt="Designer inspecting color token swatches spread across a studio worktable" loading="lazy" decoding="async" class="w-full">
+      <figcaption>Fig. 02 — Three layers of naming: primitive palettes, semantic meaning, component intent</figcaption>
+    </figure>
+
+    <h2 id="governance">Governance or ghost town</h2>
+    <p>Governance sounds bureaucratic; in practice it is four artifacts that take maybe two hours a week to maintain:</p>
+    <ol>
+      <li><strong>A named system owner.</strong> One engineer&ndash;designer pair, in the job description, with release authority. Committees advise; the owner decides in days, not weeks.</li>
+      <li><strong>A contribution path.</strong> A lightweight RFC: problem, proposed token or component, alternatives rejected. Two reviewers, a one-week SLA. If contributing is harder than hard-coding, people will hard-code.</li>
+      <li><strong>A deprecation policy.</strong> Renames warn for two minor versions before removal, with the replacement documented in the warning itself. Predictable removals are trusted; surprise removals are forked.</li>
+      <li><strong>A decision log.</strong> One file of short ADRs &mdash; date, decision, why. Six months later, &ldquo;why does Button use 700 weight?&rdquo; becomes a lookup instead of a Slack archaeology thread.</li>
+    </ol>
+    <p>The contribution path is the system&rsquo;s immune system: every need that arrives through it strengthens the system; every one that route-arounds it leaves a fork. Make the paved road the fastest road and the architecture defends itself.</p>
+
+    <h2 id="versioning">Version like a product</h2>
+    <p>A system consumed by other teams is an API and earns semantic versioning: breaking visual or naming changes are majors, new components minors, invisible value tweaks patches. The discipline pays off in three documents per release:</p>
+    <ul>
+      <li><strong>A changelog humans read.</strong> Three bullet groups &mdash; added, changed, deprecated &mdash; with a screenshot for anything visual. If the changelog requires reading the diff, it doesn&rsquo;t exist.</li>
+      <li><strong>Migration notes per major.</strong> Not &ldquo;see the commit history&rdquo; &mdash; a copy-paste find/replace table for renames, ideally shipped with a codemod.</li>
+      <li><strong>Codemods where possible.</strong> A 20-line script that renames <code>Btn</code> to <code>Button</code> across fifteen repos converts an afternoon of grudge-work into a one-line command. Teams forgive breaking changes that come with a fixer.</li>
+    </ul>
+    <p>Our rule: <strong>no release may strand a consumer.</strong> If a team can&rsquo;t upgrade within a sprint&rsquo;s slack, the release plan &mdash; not the team &mdash; is wrong.</p>
+
+    <h2 id="adoption">Adoption is marketing</h2>
+    <p>The best system with zero adoption is a hobby. Adoption is won like products are won &mdash; distribution, proof, word of mouth:</p>
+    <ul>
+      <li><strong>A docs site that answers in seconds.</strong> Search-first, copy-paste code for every component, live props. If looking it up takes longer than asking a designer in Slack, Slack wins.</li>
+      <li><strong>Office hours.</strong> Thirty minutes weekly, system owner present. Half the questions are feature requests in disguise &mdash; which is exactly the pipeline you want.</li>
+      <li><strong>A migration wins dashboard.</strong> Publicly track pages migrated and hours saved. Peer proof converts skeptics faster than any mandate.</li>
+      <li><strong>The paved-road philosophy.</strong> Never block a team from shipping. Make the system the obviously fastest path &mdash; scaffold generators, ready-made patterns, a component that already passed accessibility review &mdash; and let convenience do the enforcing.</li>
+    </ul>
+    <p>Mandates create compliance-shaped work; paved roads create compounding. We&rsquo;ve watched one organization go from 20% to 85% coverage in two quarters with nothing but a generator command and a wins dashboard.</p>
+
+    <figure>
+      <img src="https://picsum.photos/seed/asp-blog-docs/1200/640" width="1200" height="640" alt="Developer browsing a design system documentation site on a laptop" loading="lazy" decoding="async" class="w-full">
+      <figcaption>Fig. 03 — If the docs aren&rsquo;t faster than asking a designer, adoption dies in week two</figcaption>
+    </figure>
+
+    <h2 id="the-payload">The payload: what healthy looks like</h2>
+    <p>You&rsquo;ll know the system works not by its Figma file but by what happens to throughput. Four numbers tell the truth:</p>
+    <ol>
+      <li><strong>Coverage</strong> &mdash; the share of product surface built from system components. Healthy systems trend past 80% within a year.</li>
+      <li><strong>Time-to-new-page</strong> &mdash; from ticket to shipped, composable screen. The single best proxy for whether the system is real.</li>
+      <li><strong>Drift rate</strong> &mdash; one-off values and rogue tokens per sprint, counted by the lint rule. Should asymptote to zero.</li>
+      <li><strong>Onboarding time</strong> &mdash; days for a new engineer to ship a safe change, the number systems exist to compress.</li>
+    </ol>
+    <p>Against those measures, the three levels of investment compare like this:</p>
+    <div class="card-glass my-8 overflow-x-auto p-2 sm:p-4">
+      <table class="table-compare min-w-[42rem]">
+        <caption class="sr-only">Comparison of no system, component library only, and full token system</caption>
+        <thead><tr><th scope="col">Dimension</th><th scope="col">No system</th><th scope="col">Component library only</th><th scope="col">Full token system</th></tr></thead>
+        <tbody>
+          <tr><td>New page time</td><td>Days of bespoke work</td><td>Hours, if it fits the kit</td><td>Hours, on any surface</td></tr>
+          <tr><td>Visual drift</td><td>Guaranteed and fast</td><td>Slow leak at edges</td><td>Approaches zero</td></tr>
+          <tr><td>Onboarding a new dev</td><td>Weeks of archaeology</td><td>Days of examples</td><td>A day of docs</td></tr>
+          <tr><td>Dark mode / theming</td><td>Per-page rewrite</td><td>Hardcoded in components</td><td>Re-map semantic tokens</td></tr>
+          <tr><td>Rebrand cost</td><td>Every screen again</td><td>Component rewrite</td><td>Primitives re-map, done</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <svg class="callout-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6"/></svg>
+      <p><strong>The system is the product.</strong> Fund it like one: a roadmap, a backlog other teams can see, and an owner with time allocated &mdash; not a launch project that ends. Every system treated as a finite project died the quarter the project closed.</p>
+    </div>
+    <hr>
+    <p><strong>The takeaway:</strong> nobody remembers whether your v1 buttons were pretty. What they remember is whether version 2 happened at all. Build the three token layers, put one name on the door, version like an API, market it like a product &mdash; and your system will still be alive, boring, and load-bearing long after the original authors move on. That is what winning looks like here: infrastructure nobody has to think about.</p>
+  </article>
+</div>
+
+<!-- ===== TAGS + SHARE ===== -->
+<div class="shell grid gap-8 border-t border-line py-10 lg:grid-cols-12">
+  <div class="flex flex-wrap items-center gap-2 lg:col-span-6">
+    <span class="mr-2 font-mono text-[10px] uppercase tracking-[0.24em] text-mist/70">Tags</span>
+    <a href="../blog.html" class="chip">design systems</a>
+    <a href="../blog.html" class="chip">tokens</a>
+    <a href="../blog.html" class="chip">governance</a>
+    <a href="../blog.html" class="chip">web design</a>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 lg:col-span-6 lg:justify-end">
+    <span class="mr-2 font-mono text-[10px] uppercase tracking-[0.24em] text-mist/70">Share</span>
+    <button type="button" data-copy="link" class="btn-ghost !px-4 !py-2.5 text-xs"><span data-copy-label>Copy link</span></button>
+    <a href="https://x.com/intent/tweet?text=Design%20Systems%20That%20Survive%20Contact%20With%20Reality&amp;url=https%3A%2F%2Fallsyncpro.com%2Fblog%2Fpost-3.html" rel="noopener" target="_blank" class="btn-ghost !px-4 !py-2.5 text-xs" aria-label="Share on X">X</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fallsyncpro.com%2Fblog%2Fpost-3.html" rel="noopener" target="_blank" class="btn-ghost !px-4 !py-2.5 text-xs" aria-label="Share on LinkedIn">LinkedIn</a>
+    <a href="https://wa.me/?text=Design%20Systems%20That%20Survive%20Contact%20With%20Reality%20https%3A%2F%2Fallsyncpro.com%2Fblog%2Fpost-3.html" rel="noopener" target="_blank" class="btn-ghost !px-4 !py-2.5 text-xs" aria-label="Share on WhatsApp">WhatsApp</a>
+  </div>
+</div>
+
+<!-- ===== AUTHOR BIO ===== -->
+<section class="shell py-10" aria-label="About the author">
+  <div class="card-glass flex flex-col gap-6 p-7 sm:flex-row sm:items-center sm:p-8" data-reveal>
+    <img src="https://picsum.photos/seed/asp-avatar-sara/160/160" width="88" height="88" alt="Portrait of Sara Khalil" loading="lazy" decoding="async" class="size-22 flex-none rounded-full border border-line object-cover">
+    <div>
+      <p class="font-mono text-[10px] uppercase tracking-[0.24em] text-mist/70">Written by</p>
+      <h2 class="mt-1 font-display text-xl font-semibold text-chalk">Sara Khalil</h2>
+      <p class="mt-2 max-w-2xl text-sm leading-relaxed text-mist">Sara has migrated 30+ product teams from ad-hoc stylesheets to token pipelines without losing a single engineer to spreadsheet fatigue. She writes about systems humans can actually maintain, and reviews every AllSyncPro build for token drift before it leaves the building.</p>
+      <a href="../about.html" class="link-arrow mt-3 text-sm">Meet the whole team
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMMENTS (STATIC UI) ===== -->
+<section class="shell py-10" aria-labelledby="comments-heading">
+  <h2 id="comments-heading" class="font-display text-2xl font-semibold tracking-tight text-chalk" data-reveal>Discussion <span class="font-mono text-sm text-mist/60">(3)</span></h2>
+
+  <ol class="mt-8 grid gap-5">
+    <li class="card-glass p-6" data-reveal>
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/seed/asp-avatar-omar/72/72" width="36" height="36" alt="Portrait of Omar Haddad" loading="lazy" decoding="async" class="size-9 rounded-full border border-line object-cover">
+        <div><p class="text-sm font-semibold text-chalk">Omar Haddad</p><p class="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/60">Head of Growth — VelaCommerce · 3 days ago</p></div>
+      </div>
+      <p class="mt-4 text-[15px] leading-relaxed text-mist">Our v1 died exactly as described &mdash; gorgeous Figma library, zero governance, forty rogue hex codes by June. The named-owner point was the unlock nobody wanted to hear, because it meant someone had to actually own it.</p>
+    </li>
+    <li class="card-glass p-6" data-reveal>
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/seed/asp-avatar-lucy/72/72" width="36" height="36" alt="Portrait of Lucy Chen" loading="lazy" decoding="async" class="size-9 rounded-full border border-line object-cover">
+        <div><p class="text-sm font-semibold text-chalk">Lucy Chen</p><p class="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/60">Freelance Frontend Developer · 6 days ago</p></div>
+      </div>
+      <p class="mt-4 text-[15px] leading-relaxed text-mist">Migrated a client&rsquo;s kit to a token pipeline last quarter &mdash; that fifteen-line build script is basically what I wrote. The JSON export alone paid for the effort: docs, linting, and the Figma variables all stopped lying to each other.</p>
+    </li>
+    <li class="card-glass p-6" data-reveal>
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/seed/asp-avatar-raj/72/72" width="36" height="36" alt="Portrait of Raj Patel" loading="lazy" decoding="async" class="size-9 rounded-full border border-line object-cover">
+        <div><p class="text-sm font-semibold text-chalk">Raj Patel</p><p class="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/60">Founder — Parcel &amp; Pine · 1 week ago</p></div>
+      </div>
+      <p class="mt-4 text-[15px] leading-relaxed text-mist">&ldquo;Paved road&rdquo; finally explains something I couldn&rsquo;t name: our best contractor kept steering us back to the system, and it was cheaper for everyone &mdash; including me, paying the invoices.</p>
+    </li>
+  </ol>
+
+  <form class="card-glass mt-8 p-6 sm:p-8" data-reveal aria-label="Leave a comment">
+    <label for="comment" class="field-label">Join the discussion</label>
+    <textarea id="comment" name="comment" rows="3" placeholder="Share your system war stories — comments are moderated for relevance, never for disagreement." class="field resize-y"></textarea>
+    <div class="mt-4 flex items-center justify-between gap-4">
+      <p class="text-xs text-mist/60">Demo comment form — connect your endpoint to go live.</p>
+      <button type="submit" class="btn-primary !px-6 !py-3 text-sm"><span class="btn-label">Post comment</span></button>
+    </div>
+  </form>
+</section>
+
+<!-- ===== PREV / NEXT ===== -->
+<nav class="shell grid gap-4 border-t border-line py-12 sm:grid-cols-2" aria-label="Post navigation">
+  <a href="../blog/post-2.html" class="group card-glass card-hover p-6" data-reveal>
+    <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-mist/70">← Previous</p>
+    <p class="mt-2 font-display text-lg font-semibold text-chalk transition-colors duration-300 group-hover:text-plum">Core Web Vitals Are a Revenue Line, Not a Checkbox</p>
+  </a>
+  <a href="../blog/post-4.html" class="group card-glass card-hover p-6 sm:text-right" data-reveal>
+    <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-mist/70">Next →</p>
+    <p class="mt-2 font-display text-lg font-semibold text-chalk transition-colors duration-300 group-hover:text-plum">Logo vs. Brand Identity: The Difference Costs Founders Money</p>
+  </a>
+</nav>
+
+<!-- ===== RELATED POSTS ===== -->
+<section class="shell pb-16" aria-labelledby="related-posts">
+  <h2 id="related-posts" class="font-mono text-[11px] uppercase tracking-[0.28em] text-mist/70" data-reveal>Related reading</h2>
+  <div class="mt-7 grid gap-6 md:grid-cols-3" data-reveal-group="110">
+    <article class="group" data-reveal>
+      <a href="../blog/post-6.html" class="block">
+        <span class="block overflow-hidden rounded-xl border border-line">
+          <img src="https://picsum.photos/seed/asp-blog-tailwind/720/450" width="720" height="450" alt="Developer workstation with Tailwind CSS architecture diagrams" loading="lazy" decoding="async" class="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-engineered group-hover:scale-[1.05]">
+        </span>
+        <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-plum">Development</p>
+        <h3 class="mt-2 font-display text-lg font-semibold leading-snug text-chalk transition-colors duration-300 group-hover:text-plum">Tailwind at Scale: Architecture Notes From 40 Production Builds</h3>
+      </a>
+    </article>
+    <article class="group" data-reveal>
+      <a href="../blog/post-2.html" class="block">
+        <span class="block overflow-hidden rounded-xl border border-line">
+          <img src="https://picsum.photos/seed/asp-blog-cwv/720/450" width="720" height="450" alt="Core Web Vitals dashboard showing green scores across metrics" loading="lazy" decoding="async" class="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-engineered group-hover:scale-[1.05]">
+        </span>
+        <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-plum">SEO</p>
+        <h3 class="mt-2 font-display text-lg font-semibold leading-snug text-chalk transition-colors duration-300 group-hover:text-plum">Core Web Vitals Are a Revenue Line, Not a Checkbox</h3>
+      </a>
+    </article>
+    <article class="group" data-reveal>
+      <a href="../blog/post-5.html" class="block">
+        <span class="block overflow-hidden rounded-xl border border-line">
+          <img src="https://picsum.photos/seed/asp-blog-hero3s/720/450" width="720" height="450" alt="Designer reviewing hero section wireframes on a large monitor" loading="lazy" decoding="async" class="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-engineered group-hover:scale-[1.05]">
+        </span>
+        <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-plum">Web Design</p>
+        <h3 class="mt-2 font-display text-lg font-semibold leading-snug text-chalk transition-colors duration-300 group-hover:text-plum">The First 3 Seconds: Engineering a Hero That Converts</h3>
+      </a>
+    </article>
+  </div>
+</section>
+
+</main>
+<!-- ===== SHARED PRE-FOOTER CTA (injected on content pages) ===== -->
+<section class="relative overflow-hidden border-t border-line" aria-labelledby="cta-heading">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="absolute left-[8%] top-[-30%] h-[26rem] w-[26rem] glow-violet blur-3xl"></div>
+    <div class="absolute bottom-[-40%] right-[4%] h-[24rem] w-[24rem] glow-cyan blur-3xl"></div>
+    <div class="absolute inset-0 bg-gridlines opacity-[0.35] [mask-image:radial-gradient(70%_70%_at_50%_50%,black,transparent)]"></div>
+  </div>
+  <div class="shell relative flex flex-col items-center gap-7 py-24 text-center md:py-32">
+    <p class="eyebrow" data-reveal data-scramble>Ready when you are</p>
+    <h2 id="cta-heading" class="max-w-4xl font-display text-display-xl font-semibold tracking-tight text-chalk" data-reveal data-split="words">
+      Your next chapter deserves <span class="text-gradient">better gear.</span>
+    </h2>
+    <p class="max-w-xl text-lg leading-relaxed text-mist" data-reveal>
+      Book a free 30-minute discovery call. We&rsquo;ll map your goals, flag the fastest wins, and tell you honestly whether we&rsquo;re the right studio for the job.
+    </p>
+    <div class="mt-2 flex flex-col items-center gap-4 sm:flex-row" data-reveal>
+      <a href="../contact.html" data-magnetic="0.3" class="btn-primary !px-8 !py-4 text-base">
+        <span class="btn-label">Start a Project</span>
+        <svg class="btn-arrow" width="15" height="15" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="../portfolio.html" class="btn-ghost !px-8 !py-4 text-base">See the proof</a>
+    </div>
+    <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.26em] text-mist/70" data-reveal>
+      <span class="inline-flex items-center gap-2"><span class="size-1.5 rounded-full bg-cyan anim-pulse-dot" aria-hidden="true"></span>Reply within 48 hours — usually same day</span>
+    </p>
+  </div>
+</section>
+<!-- ===================== FOOTER ===================== -->
+<footer class="relative overflow-hidden border-t border-line bg-surface/40">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="absolute -top-40 left-1/2 h-96 w-[60rem] -translate-x-1/2 glow-violet opacity-60 blur-3xl"></div>
+    <div class="absolute inset-0 bg-dots [mask-image:linear-gradient(180deg,black,transparent_65%)] opacity-70"></div>
+  </div>
+
+  <div class="shell relative">
+    <!-- Oversized CTA block -->
+    <div class="flex flex-col items-start gap-8 border-b border-line py-20 lg:flex-row lg:items-end lg:justify-between lg:py-24">
+      <div class="max-w-3xl">
+        <p class="eyebrow" data-scramble>Final call</p>
+        <h2 class="mt-5 font-display text-display-lg font-semibold tracking-tight text-chalk" data-split="words">
+          Let&rsquo;s build something <span class="text-gradient">in sync.</span>
+        </h2>
+        <p class="mt-5 max-w-xl text-lg leading-relaxed text-mist">
+          Tell us where your brand needs to be. We&rsquo;ll reply within 48 hours — usually the same day — with honest next steps, a fit assessment, and a first sketch of the road ahead.
+        </p>
+      </div>
+      <div class="flex flex-col items-start gap-4">
+        <a href="../contact.html" data-magnetic="0.3" class="btn-primary !px-8 !py-4 text-base">
+          <span class="btn-label">Start a Project</span>
+          <svg class="btn-arrow" width="15" height="15" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="mailto:hello@allsyncpro.com" class="link-arrow text-sm">hello@allsyncpro.com</a>
+      </div>
+    </div>
+
+    <!-- Sitemap columns -->
+    <div class="grid grid-cols-2 gap-x-8 gap-y-12 py-16 md:grid-cols-4 lg:grid-cols-6">
+      <div class="col-span-2">
+        <a href="../index.html" class="flex items-center gap-3" aria-label="AllSyncPro — home">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="aspG2" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6E4BFF"/><stop offset="1" stop-color="#22D3EE"/>
+              </linearGradient>
+            </defs>
+            <circle cx="12.5" cy="16" r="8.5" stroke="url(#aspG2)" stroke-width="1.5"/>
+            <circle cx="19.5" cy="16" r="8.5" stroke="url(#aspG2)" stroke-width="1.5" opacity=".55"/>
+            <circle cx="16" cy="16" r="2.6" fill="url(#aspG2)"/>
+          </svg>
+          <span class="font-display text-lg font-semibold tracking-tight text-chalk">allsync<span class="text-gradient">pro</span></span>
+        </a>
+        <p class="mt-5 max-w-xs text-sm leading-relaxed text-mist">
+          A design &amp; engineering studio for founders who want strategy, identity, interface, and code moving as one system.
+        </p>
+        <form data-newsletter class="mt-7 flex max-w-sm items-center gap-2" novalidate>
+          <label for="footer-newsletter" class="sr-only">Email address for the studio newsletter</label>
+          <input id="footer-newsletter" type="email" name="email" required placeholder="you@company.com" autocomplete="email" class="field !rounded-full !py-2.5 text-sm">
+          <button type="submit" class="btn-ghost flex-none !px-4 !py-2.5 text-sm">Join</button>
+        </form>
+        <p class="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-mist/60">One email a month. Zero noise.</p>
+      </div>
+
+      <nav aria-label="Services">
+        <h3 class="font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Services</h3>
+        <ul class="mt-5 grid gap-3 text-sm">
+          <li><a href="../services/web-design.html" class="text-mist transition-colors hover:text-chalk">Web Design</a></li>
+          <li><a href="../services/web-development.html" class="text-mist transition-colors hover:text-chalk">Web Development</a></li>
+          <li><a href="../services/graphic-design.html" class="text-mist transition-colors hover:text-chalk">Graphic Design</a></li>
+          <li><a href="../services/logo-brand-identity.html" class="text-mist transition-colors hover:text-chalk">Logo &amp; Brand Identity</a></li>
+          <li><a href="../services/banner-ad-creative.html" class="text-mist transition-colors hover:text-chalk">Banner &amp; Ad Creative</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Studio">
+        <h3 class="font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Studio</h3>
+        <ul class="mt-5 grid gap-3 text-sm">
+          <li><a href="../about.html" class="text-mist transition-colors hover:text-chalk">About us</a></li>
+          <li><a href="../portfolio.html" class="text-mist transition-colors hover:text-chalk">Case studies</a></li>
+          <li><a href="../blog.html" class="text-mist transition-colors hover:text-chalk">Journal</a></li>
+          <li><a href="../pricing.html" class="text-mist transition-colors hover:text-chalk">Pricing</a></li>
+          <li><a href="../contact.html" class="text-mist transition-colors hover:text-chalk">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Resources">
+        <h3 class="font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Resources</h3>
+        <ul class="mt-5 grid gap-3 text-sm">
+          <li><a href="../faq.html" class="text-mist transition-colors hover:text-chalk">FAQ</a></li>
+          <li><a href="../blog/post-1.html" class="text-mist transition-colors hover:text-chalk">Anatomy of a $20k site</a></li>
+          <li><a href="../blog/post-5.html" class="text-mist transition-colors hover:text-chalk">The first 3 seconds</a></li>
+          <li><a href="../privacy-policy.html" class="text-mist transition-colors hover:text-chalk">Privacy policy</a></li>
+          <li><a href="../terms.html" class="text-mist transition-colors hover:text-chalk">Terms of service</a></li>
+        </ul>
+      </nav>
+
+      <div class="col-span-2 md:col-span-1">
+        <h3 class="font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Contact</h3>
+        <ul class="mt-5 grid gap-3 text-sm text-mist">
+          <li><a href="mailto:hello@allsyncpro.com" class="transition-colors hover:text-chalk">hello@allsyncpro.com</a></li>
+          <li><a href="tel:+442080891200" class="transition-colors hover:text-chalk">+44 20 8089 1200</a></li>
+          <li class="leading-relaxed">48 Warren Street<br>London W1T 5BB, UK</li>
+          <li class="font-mono text-xs text-mist/70">Mon–Fri · 09:00–18:00 GMT</li>
+        </ul>
+        <div class="mt-6 flex gap-2">
+          <a href="https://x.com" rel="noopener" aria-label="AllSyncPro on X" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L2.5 2h6.4l4.4 5.9L18.9 2Zm-1.1 18h1.7L7.9 3.7H6.1L17.8 20Z"/></svg>
+          </a>
+          <a href="https://linkedin.com" rel="noopener" aria-label="AllSyncPro on LinkedIn" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9Z"/></svg>
+          </a>
+          <a href="https://dribbble.com" rel="noopener" aria-label="AllSyncPro on Dribbble" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M5.5 6.5c4 4.4 8.9 6 13.9 6M8.5 3.3c2.7 4.9 4.2 9.6 4.6 16.6M20.6 13.9c-5.4-.6-9.7.8-13.3 4.8"/></svg>
+          </a>
+          <a href="https://github.com" rel="noopener" aria-label="AllSyncPro on GitHub" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Giant animated wordmark -->
+  <div class="shell-full select-none" aria-hidden="true">
+    <div class="wordmark-giant whitespace-nowrap text-center text-[13.5vw] leading-[0.78]" data-parallax="0.08">ALLSYNCPRO</div>
+  </div>
+
+  <!-- Legal row -->
+  <div class="shell">
+    <div class="flex flex-col items-start justify-between gap-4 border-t border-line py-7 text-xs text-mist/80 sm:flex-row sm:items-center">
+      <p>© <span data-year>2026</span> AllSyncPro Ltd. All rights reserved. Company No. 11284557.</p>
+      <p class="font-mono uppercase tracking-[0.22em]">Designed &amp; engineered in sync</p>
+      <div class="flex items-center gap-5">
+        <a href="../privacy-policy.html" class="transition-colors hover:text-chalk">Privacy</a>
+        <a href="../terms.html" class="transition-colors hover:text-chalk">Terms</a>
+        <a href="../sitemap.xml" class="transition-colors hover:text-chalk">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ===== BACK TO TOP ===== -->
+<button type="button" data-backtotop data-visible="false" aria-label="Back to top" class="fixed bottom-6 right-6 z-[150] grid size-12 place-items-center rounded-full border border-line bg-elevated/85 text-chalk backdrop-blur-md transition-all duration-500 ease-engineered hover:border-plum/60">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5"/></svg>
+</button>
+
+<!-- ===== COOKIE / CONSENT BAR ===== -->
+<div data-cookiebar data-visible="false" role="region" aria-label="Cookie consent" class="fixed bottom-4 left-1/2 z-[150] w-[min(92vw,54rem)] transition-all duration-[600ms] ease-engineered">
+  <div class="card-glass flex flex-col items-start gap-4 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+    <p class="text-sm leading-relaxed text-mist">
+      We use a handful of privacy-friendly cookies to remember your theme and measure anonymous traffic. No ad trackers, no data resale —
+      <a href="../privacy-policy.html" class="text-plum underline decoration-plum/40 underline-offset-2 hover:decoration-plum">read the policy</a>.
+    </p>
+    <div class="flex flex-none gap-3">
+      <button type="button" data-cookie-accept class="btn-primary !px-5 !py-2.5 text-sm"><span class="btn-label">Accept</span></button>
+      <button type="button" data-cookie-accept class="btn-ghost !px-5 !py-2.5 text-sm">Essential only</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOASTS ===== -->
+<div data-toasts class="fixed bottom-6 left-1/2 z-[210] flex w-[min(92vw,26rem)] -translate-x-1/2 flex-col gap-2"></div>
+
+<!-- ===== SCRIPTS (CDN, optional by design — every feature degrades) ===== -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script type="module" src="../assets/js/main.js"></script>
+
+</body>
+</html>

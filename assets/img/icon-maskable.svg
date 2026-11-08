@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="AllSyncPro app icon">
+  <defs>
+    <linearGradient id="ig" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6E4BFF"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="#06070A"/>
+  <circle cx="200" cy="256" r="136" stroke="url(#ig)" stroke-width="24"/>
+  <circle cx="312" cy="256" r="136" stroke="url(#ig)" stroke-width="24" opacity=".55"/>
+  <circle cx="256" cy="256" r="41.6" fill="url(#ig)"/>
+</svg>

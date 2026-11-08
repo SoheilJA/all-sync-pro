@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en" class="theme-dark no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Theme + a11y bootstrap: runs before paint to prevent flash; the no-js
+     class is only swapped by the module bundle, so a failed module load
+     (e.g. file:// CORS) still renders every section fully visible. -->
+<script>
+(function(){try{var t=localStorage.getItem('asp-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}var d=document.documentElement;d.classList.remove('theme-dark','theme-light');d.classList.add(t==='light'?'theme-light':'theme-dark')}catch(e){document.documentElement.classList.add('theme-dark')}})();
+</script>
+<meta name="theme-color" content="#06070A">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/icon-192.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap">
+<!-- Tailwind Play CDN (pinned) — zero-build default. For production, build
+     with the Tailwind CLI instead (see README.md). -->
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script src="../tailwind.config.js"></script>
+<link rel="stylesheet" href="../assets/css/main.css">
+<title>Logo vs. Brand Identity: The Costly Difference | AllSyncPro</title>
+<meta name="description" content="A $300 logo is a drawing; a $12,000 identity system is a machine for making every future asset cheaper. Here is what the money actually buys, and when to skip it.">
+<link rel="canonical" href="https://allsyncpro.com/blog/post-4.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AllSyncPro">
+<meta property="og:title" content="Logo vs. Brand Identity: The Costly Difference | AllSyncPro">
+<meta property="og:description" content="A $300 logo is a drawing; a $12,000 identity system is a machine for making every future asset cheaper. Here is what the money actually buys, and when to skip it.">
+<meta property="og:url" content="https://allsyncpro.com/blog/post-4.html">
+<meta property="og:image" content="https://picsum.photos/seed/asp-blog-brand/1200/630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AllSyncPro — Logo vs. Brand Identity: The Costly Difference | AllSyncPro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Logo vs. Brand Identity: The Costly Difference | AllSyncPro">
+<meta name="twitter:description" content="A $300 logo is a drawing; a $12,000 identity system is a machine for making every future asset cheaper. Here is what the money actually buys, and when to skip it.">
+<meta name="twitter:image" content="https://picsum.photos/seed/asp-blog-brand/1200/630">
+<meta name="twitter:image:alt" content="AllSyncPro — Logo vs. Brand Identity: The Costly Difference | AllSyncPro">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://allsyncpro.com/#organization",
+  "name": "AllSyncPro",
+  "url": "https://allsyncpro.com/",
+  "logo": "https://allsyncpro.com/assets/img/logo.svg",
+  "slogan": "Everything, in sync.",
+  "description": "Full-service digital studio uniting strategy, identity, interface, and engineering into one synchronized system.",
+  "foundingDate": "2018",
+  "email": "hello@allsyncpro.com",
+  "telephone": "+44 20 8089 1200",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "48 Warren Street",
+    "addressLocality": "London",
+    "postalCode": "W1T 5BB",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    "https://x.com",
+    "https://linkedin.com",
+    "https://dribbble.com",
+    "https://github.com"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "hello@allsyncpro.com",
+      "telephone": "+44 20 8089 1200",
+      "availableLanguage": [
+        "English"
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://allsyncpro.com/#website",
+  "url": "https://allsyncpro.com/",
+  "name": "AllSyncPro",
+  "publisher": {
+    "@id": "https://allsyncpro.com/#organization"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://allsyncpro.com/blog.html?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://allsyncpro.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Journal",
+      "item": "https://allsyncpro.com/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Logo vs. Brand Identity: The Difference Costs Founders Money",
+      "item": "https://allsyncpro.com/blog/post-4.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Logo vs. Brand Identity: The Difference Costs Founders Money",
+  "description": "A $300 logo is a drawing; a $12,000 identity system is a machine for making every future asset cheaper. Here is what the money actually buys, and when to skip it.",
+  "image": [
+    "https://picsum.photos/seed/asp-blog-brand/1200/630",
+    "https://picsum.photos/seed/asp-blog-brand/1600/840"
+  ],
+  "datePublished": "2026-05-06",
+  "dateModified": "2026-05-06",
+  "inLanguage": "en",
+  "wordCount": 1100,
+  "timeRequired": "PT8M",
+  "keywords": "Branding, Business",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://allsyncpro.com/blog/post-4.html"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Yuki Tanaka",
+    "jobTitle": "Brand Strategist",
+    "worksFor": {
+      "@id": "https://allsyncpro.com/#organization"
+    }
+  },
+  "publisher": {
+    "@id": "https://allsyncpro.com/#organization"
+  }
+}
+</script>
+</head>
+<body class="page-post">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ===== PRELOADER (once per session) ===== -->
+<div class="preloader" data-preloader data-state="run" aria-hidden="true">
+  <div class="flex flex-col items-center gap-5 px-6 text-center">
+    <svg width="52" height="52" viewBox="0 0 32 32" fill="none" aria-hidden="true" class="anim-float">
+      <defs>
+        <linearGradient id="aspGpre" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#6E4BFF"/><stop offset="1" stop-color="#22D3EE"/>
+        </linearGradient>
+      </defs>
+      <circle cx="12.5" cy="16" r="8.5" stroke="url(#aspGpre)" stroke-width="1.4"/>
+      <circle cx="19.5" cy="16" r="8.5" stroke="url(#aspGpre)" stroke-width="1.4" opacity=".5"/>
+      <circle cx="16" cy="16" r="2.6" fill="url(#aspGpre)"/>
+    </svg>
+    <div class="flex items-baseline gap-3 font-mono text-[10px] uppercase tracking-[0.34em] text-mist">
+      <span>AllSyncPro</span><span class="text-mist/40">/ Syncing</span>
+    </div>
+    <div class="h-px w-44 overflow-hidden bg-line">
+      <div class="h-full w-full bg-gradient-to-r from-violet to-cyan" style="animation: asp-shimmer 1.4s linear infinite; background-size: 200% 100%;"></div>
+    </div>
+    <div class="font-display text-6xl font-semibold tabular-nums text-chalk" data-preloader-num>00</div>
+  </div>
+</div>
+
+<!-- ===== SCROLL PROGRESS ===== -->
+<div data-progress aria-hidden="true" class="fixed inset-x-0 top-0 z-[95] h-[2px] origin-left scale-x-0 bg-gradient-to-r from-violet via-cyan to-ember"></div>
+
+<!-- ===== PAGE TRANSITION CURTAIN ===== -->
+<div data-pt-overlay class="pt-overlay" aria-hidden="true" data-phase="idle"></div>
+
+<!-- ===================== HEADER / NAVIGATION ===================== -->
+<header data-header data-scrolled="false" class="group/header fixed inset-x-0 top-0 z-50">
+  <div class="shell-wide">
+    <div class="flex h-[4.75rem] items-center justify-between border border-transparent px-0 transition-all duration-500 ease-engineered group-data-[scrolled=true]/header:mt-3 group-data-[scrolled=true]/header:h-16 group-data-[scrolled=true]/header:rounded-2xl group-data-[scrolled=true]/header:border-line group-data-[scrolled=true]/header:bg-ink/75 group-data-[scrolled=true]/header:px-5 group-data-[scrolled=true]/header:shadow-card group-data-[scrolled=true]/header:backdrop-blur-xl">
+
+      <!-- Logo -->
+      <a href="../index.html" class="flex items-center gap-3" aria-label="AllSyncPro — home">
+        <svg width="34" height="34" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="aspG1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6E4BFF"/><stop offset="1" stop-color="#22D3EE"/>
+            </linearGradient>
+          </defs>
+          <circle cx="12.5" cy="16" r="8.5" stroke="url(#aspG1)" stroke-width="1.5"/>
+          <circle cx="19.5" cy="16" r="8.5" stroke="url(#aspG1)" stroke-width="1.5" opacity=".55"/>
+          <circle cx="16" cy="16" r="2.6" fill="url(#aspG1)"/>
+        </svg>
+        <span class="font-display text-[1.2rem] font-semibold tracking-tight text-chalk">allsync<span class="text-gradient">pro</span></span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav aria-label="Primary" class="hidden lg:block">
+        <ul class="flex items-center gap-7">
+          <li class="group relative" data-mega-wrap>
+            <button type="button" data-mega-trigger aria-expanded="false" aria-controls="mega-panel" class="nav-link">
+              Services
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true" class="transition-transform duration-300 ease-engineered group-hover:rotate-180"><path d="M2 3.5 5 6.5 8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <!-- Mega panel: opens via CSS hover/focus-within; JS syncs ARIA -->
+            <div id="mega-panel" class="pointer-events-none absolute left-1/2 top-full z-40 w-[min(64rem,88vw)] -translate-x-1/2 translate-y-3 pt-5 opacity-0 transition-all duration-500 ease-engineered group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+              <div class="card-glass overflow-hidden p-2">
+                <div class="grid grid-cols-12 gap-1">
+
+                  <!-- Flagship services -->
+                  <div class="col-span-7 grid gap-1 border-line p-2 lg:border-r">
+                    <p class="px-3 pb-1 pt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Flagship services</p>
+                    <a href="../services/web-design.html" class="group/item flex items-start gap-4 rounded-xl p-3 transition-colors duration-300 hover:bg-chalk/5">
+                      <span class="mt-0.5 grid size-11 flex-none place-items-center rounded-lg border border-line bg-elevated/70 text-plum transition-colors duration-300 group-hover/item:border-plum/50">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg>
+                      </span>
+                      <span>
+                        <span class="flex items-center gap-2 font-display text-base font-semibold text-chalk">Web Design
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" class="text-mist transition-all duration-300 group-hover/item:-translate-y-0.5 group-hover/item:translate-x-0.5 group-hover/item:text-plum"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="mt-1 block text-sm leading-relaxed text-mist">Conversion-first interfaces, art-directed and engineered to the pixel.</span>
+                      </span>
+                    </a>
+                    <a href="../services/web-development.html" class="group/item flex items-start gap-4 rounded-xl p-3 transition-colors duration-300 hover:bg-chalk/5">
+                      <span class="mt-0.5 grid size-11 flex-none place-items-center rounded-lg border border-line bg-elevated/70 text-cyan transition-colors duration-300 group-hover/item:border-plum/50">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6M16 6l6 6-6 6M13 4l-2 16"/></svg>
+                      </span>
+                      <span>
+                        <span class="flex items-center gap-2 font-display text-base font-semibold text-chalk">Web Development
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" class="text-mist transition-all duration-300 group-hover/item:-translate-y-0.5 group-hover/item:translate-x-0.5 group-hover/item:text-plum"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="mt-1 block text-sm leading-relaxed text-mist">Fast, scalable builds — from marketing sites to full platforms.</span>
+                      </span>
+                    </a>
+                  </div>
+
+                  <!-- Secondary + featured case -->
+                  <div class="col-span-5 grid content-start gap-1 p-2">
+                    <p class="px-3 pb-1 pt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Also in the studio</p>
+                    <a href="../services/graphic-design.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-mist transition-colors duration-300 hover:bg-chalk/5 hover:text-chalk">
+                      <span class="size-1.5 rounded-full bg-violet/80" aria-hidden="true"></span>Graphic Design</a>
+                    <a href="../services/logo-brand-identity.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-mist transition-colors duration-300 hover:bg-chalk/5 hover:text-chalk">
+                      <span class="size-1.5 rounded-full bg-cyan/80" aria-hidden="true"></span>Logo &amp; Brand Identity</a>
+                    <a href="../services/banner-ad-creative.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-mist transition-colors duration-300 hover:bg-chalk/5 hover:text-chalk">
+                      <span class="size-1.5 rounded-full bg-ember/80" aria-hidden="true"></span>Banner &amp; Ad Creative</a>
+
+                    <a href="../portfolio.html" class="group/case mt-3 block overflow-hidden rounded-xl border border-line">
+                      <span class="block overflow-hidden">
+                        <img src="https://picsum.photos/seed/asp-novacart-mega/640/320" width="640" height="320" alt="NovaCart replatform case study preview" loading="lazy" decoding="async" class="aspect-[2/1] w-full object-cover transition-transform duration-700 ease-engineered group-hover/case:scale-[1.04]">
+                      </span>
+                      <span class="flex items-center justify-between gap-3 border-t border-line bg-elevated/60 px-4 py-3">
+                        <span class="text-sm font-medium text-chalk">NovaCart replatform</span>
+                        <span class="font-mono text-[11px] text-cyan">+142% CVR</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between gap-4 border-t border-line px-5 py-3.5">
+                  <p class="text-sm text-mist">Not sure what you need?</p>
+                  <a href="../contact.html" class="link-arrow text-sm">Book a discovery call
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="../portfolio.html" data-nav="work" class="nav-link">Work</a></li>
+          <li><a href="../about.html" data-nav="studio" class="nav-link">Studio</a></li>
+          <li><a href="../blog.html" data-nav="journal" aria-current="page" class="nav-link">Journal</a></li>
+          <li><a href="../pricing.html" data-nav="pricing" class="nav-link">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2.5">
+        <button type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme" class="grid size-11 place-items-center rounded-full border border-line text-mist transition-all duration-300 hover:border-plum/60 hover:text-chalk">
+          <svg data-icon-sun width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.8 1.8M17.2 17.2 19 19M19 5l-1.8 1.8M6.8 17.2 5 19"/></svg>
+          <svg data-icon-moon width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="M20 13.2A8.2 8.2 0 1 1 10.8 4a6.6 6.6 0 0 0 9.2 9.2Z"/></svg>
+        </button>
+
+        <a href="../contact.html" data-magnetic="0.25" class="btn-primary hidden !px-6 !py-3 text-sm sm:inline-flex">
+          <span class="btn-label">Start a Project</span>
+          <svg class="btn-arrow" width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+        <button type="button" data-menu-open aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="grid size-11 place-items-center rounded-full border border-line text-chalk transition-colors duration-300 hover:border-plum/60 lg:hidden">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1.5 4.5h15M1.5 9h15M1.5 13.5h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MOBILE MENU ===================== -->
+<div data-mobile-menu data-open="false" role="dialog" aria-modal="true" aria-label="Menu" class="group fixed inset-0 z-[60] invisible pointer-events-none opacity-0 transition-[visibility,opacity] duration-[400ms] ease-engineered data-[open=true]:visible data-[open=true]:pointer-events-auto data-[open=true]:opacity-100 lg:hidden">
+  <div class="absolute inset-0 bg-ink/85 backdrop-blur-2xl"></div>
+  <div class="absolute inset-x-0 top-0 h-full overflow-y-auto overscroll-contain px-[var(--gutter)] pb-10 pt-24">
+    <button type="button" data-menu-close aria-label="Close menu" class="absolute right-[var(--gutter)] top-5 grid size-11 place-items-center rounded-full border border-line text-chalk transition-colors duration-300 hover:border-plum/60">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2.5 2.5 13.5 13.5M13.5 2.5 2.5 13.5"/></svg>
+    </button>
+
+    <nav aria-label="Mobile" class="flex flex-col gap-1">
+      <a href="../index.html" data-nav="home" class="nav-m-item border-b border-line py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Home</a>
+
+      <details class="nav-m-item group/srv border-b border-line py-4 transition-[transform,opacity] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">
+        <summary class="flex cursor-pointer list-none items-center justify-between font-display text-3xl font-semibold tracking-tight text-chalk transition-colors duration-300 hover:text-plum [&::-webkit-details-marker]:hidden">
+          Services
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" class="transition-transform duration-300 ease-engineered group-open/srv:rotate-45"><path d="M8 3v10M3 8h10"/></svg>
+        </summary>
+        <div class="grid gap-0.5 pb-5 pt-3">
+          <a href="../services/web-design.html" class="rounded-lg px-3 py-2.5 text-lg font-medium text-mist transition-colors hover:bg-chalk/5 hover:text-chalk">Web Design</a>
+          <a href="../services/web-development.html" class="rounded-lg px-3 py-2.5 text-lg font-medium text-mist transition-colors hover:bg-chalk/5 hover:text-chalk">Web Development</a>
+          <a href="../services/graphic-design.html" class="rounded-lg px-3 py-2.5 text-lg font-medium text-mist transition-colors hover:bg-chalk/5 hover:text-chalk">Graphic Design</a>
+          <a href="../services/logo-brand-identity.html" class="rounded-lg px-3 py-2.5 text-lg font-medium text-mist transition-colors hover:bg-chalk/5 hover:text-chalk">Logo &amp; Brand Identity</a>
+          <a href="../services/banner-ad-creative.html" class="rounded-lg px-3 py-2.5 text-lg font-medium text-mist transition-colors hover:bg-chalk/5 hover:text-chalk">Banner &amp; Ad Creative</a>
+        </div>
+      </details>
+
+      <a href="../portfolio.html" data-nav="work" class="nav-m-item border-b border-line py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Work</a>
+      <a href="../about.html" data-nav="studio" class="nav-m-item border-b border-line py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Studio</a>
+      <a href="../blog.html" data-nav="journal" aria-current="page" class="nav-m-item border-b border-line py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Journal</a>
+      <a href="../pricing.html" data-nav="pricing" class="nav-m-item border-b border-line py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Pricing</a>
+      <a href="../contact.html" data-nav="contact" class="nav-m-item py-4 font-display text-3xl font-semibold tracking-tight text-chalk transition-[transform,opacity,color] duration-500 ease-engineered group-data-[open=true]:translate-y-0 group-data-[open=true]:opacity-100">Contact</a>
+    </nav>
+
+    <div class="mt-10 flex flex-col gap-6">
+      <a href="../contact.html" class="btn-primary w-full">
+        <span class="btn-label">Start a Project</span>
+        <svg class="btn-arrow" width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="flex items-center justify-between border-t border-line pt-6">
+        <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-mist/70">Follow the studio</p>
+        <div class="flex gap-2">
+          <a href="https://x.com" rel="noopener" aria-label="AllSyncPro on X" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L2.5 2h6.4l4.4 5.9L18.9 2Zm-1.1 18h1.7L7.9 3.7H6.1L17.8 20Z"/></svg>
+          </a>
+          <a href="https://linkedin.com" rel="noopener" aria-label="AllSyncPro on LinkedIn" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9Z"/></svg>
+          </a>
+          <a href="https://dribbble.com" rel="noopener" aria-label="AllSyncPro on Dribbble" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M5.5 6.5c4 4.4 8.9 6 13.9 6M8.5 3.3c2.7 4.9 4.2 9.6 4.6 16.6M20.6 13.9c-5.4-.6-9.7.8-13.3 4.8"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+<nav aria-label="Breadcrumb" class="shell pt-28 lg:pt-32">
+<ol class="flex flex-wrap items-center font-mono text-[11px] uppercase tracking-[0.18em] text-mist/70">
+<li><a href="../index.html" class="transition-colors hover:text-chalk">Home</a></li>
+<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mx-1 text-mist/40"><path d="m6 3 5 5-5 5"/></svg>
+<li><a href="../blog.html" class="transition-colors hover:text-chalk">Journal</a></li>
+<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mx-1 text-mist/40"><path d="m6 3 5 5-5 5"/></svg>
+<li aria-current="page"><span class="text-chalk">Logo vs. Brand Identity: The Difference Costs Founders Money</span></li>
+</ol>
+</nav>
+<!-- ==================================================================
+     BLOG POST 4 — "Logo vs. Brand Identity: The Difference Costs Founders Money"
+     ================================================================== -->
+
+<!-- ===== POST HEADER ===== -->
+<header class="relative overflow-hidden pb-12 pt-36 lg:pt-44" aria-labelledby="post-title">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="hero-mesh absolute inset-0 opacity-40"></div>
+    <div class="absolute right-[6%] top-[34%] h-64 w-64 glow-violet blur-3xl opacity-50"></div>
+  </div>
+  <div class="shell relative max-w-4xl">
+    <div class="flex flex-wrap items-center gap-3" data-reveal>
+      <a href="../blog.html" class="chip hover:text-chalk">Branding</a>
+      <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-mist/70">06 May 2026</span>
+      <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-mist/70">· 8 min read</span>
+    </div>
+    <h1 id="post-title" class="mt-6 font-display text-display-lg font-semibold tracking-tight text-chalk" data-split="words">
+      Logo vs. Brand Identity: <span class="text-gradient">The Difference Costs Founders Money</span>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-mist" data-reveal style="--reveal-delay:180ms">
+      One is a drawing. The other is every visual decision your company will make for the next three years, made once and on purpose. The gap between them is where founder money quietly disappears &mdash; here is how to tell which one a quote is actually selling you.
+    </p>
+    <div class="mt-8 flex items-center gap-4 border-t border-line pt-7" data-reveal style="--reveal-delay:260ms">
+      <img src="https://picsum.photos/seed/asp-avatar-yuki/96/96" width="48" height="48" alt="Portrait of Yuki Tanaka" loading="lazy" decoding="async" class="size-12 rounded-full border border-line object-cover">
+      <div>
+        <p class="text-sm font-semibold text-chalk">Yuki Tanaka</p>
+        <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-mist/70">Brand Strategist</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== FEATURED IMAGE ===== -->
+<figure class="shell-full mb-16 mt-4" data-reveal>
+  <img src="https://picsum.photos/seed/asp-blog-brand/1600/840" width="1600" height="840" alt="Brand identity guidelines spread with logo variations and color swatches" loading="eager" fetchpriority="high" decoding="async" class="aspect-[40/21] w-full rounded-2xl border border-line object-cover shadow-card">
+  <figcaption class="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-mist/70">Fig. 01 — A signature is not a person &mdash; but you&rsquo;ll be signing with it for years</figcaption>
+</figure>
+
+<!-- ===== ARTICLE BODY + STICKY TOC ===== -->
+<div class="shell grid grid-cols-1 gap-12 pb-8 lg:grid-cols-12">
+  <aside class="order-2 lg:order-1 lg:col-span-3">
+    <nav data-toc class="sticky top-28 hidden max-h-[70vh] overflow-y-auto border-l border-line pl-5 lg:block" aria-label="Table of contents">
+      <p class="mb-4 font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">On this page</p>
+      <ul class="grid gap-3 text-sm">
+        <li><a href="#the-300-logo" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">The $300 logo, itemized</a></li>
+        <li><a href="#what-identity-buys" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">What an identity buys</a></li>
+        <li><a href="#compounding" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">The compounding math</a></li>
+        <li><a href="#when-logo-is-enough" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">When a logo is enough</a></li>
+        <li><a href="#evaluating" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">Evaluating the quotes</a></li>
+        <li><a href="#the-choice" class="border-l -ml-5 border-transparent pl-0 py-0.5 text-mist/70 transition-all duration-300 hover:text-chalk">The choice: decisions vs. drawings</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <article class="article-body order-1 lg:col-span-8 lg:col-start-5">
+    <p>A logo is a signature. An identity is the person who signs &mdash; the voice, the wardrobe, the way the handshake feels at a trade show. Confusing the two is the most expensive category error in early-stage branding, and it happens in both directions: founders who buy a $12,000 identity before they have anything to say, and founders who buy a $300 drawing and then pay <em>that</em> price anyway, in installments, across every asset they ever produce. Both lose money. Only one of them knows it yet.</p>
+
+    <h2 id="the-300-logo">The $300 logo, itemized</h2>
+    <p>To be clear about what $300 buys, because the transaction is rarely described honestly: you get <strong>a drawing</strong>. Often a competent one, sometimes from a contest where five people worked unpaid and one got paid. What you do not get is anything that makes the drawing <em>usable</em> &mdash; no strategy, no usage rules, no system around it. The hidden costs arrive on a schedule:</p>
+    <ul>
+      <li><strong>The application tax.</strong> Every new asset &mdash; deck, packaging, ad, profile &mdash; re-opens the question &ldquo;how does the brand look here?&rdquo; and someone improvises a new answer each time.</li>
+      <li><strong>The designer friction tax.</strong> Web designers, printers, and motion freelancers all charge more to reverse-engineer rules that don&rsquo;t exist: which fonts, what clearspace, which color mode.</li>
+      <li><strong>The file-format tax.</strong> A flattened RGB PNG when the printer needed vector CMYK, and a favicon nobody made.</li>
+      <li><strong>The redo tax.</strong> At Series A, the company realizes it owns a drawing, not a brand, and commissions the identity it skipped &mdash; now plus the cost of un-branding three years of improvised assets.</li>
+    </ul>
+    <p>None of this shows up on the $300 invoice. All of it shows up on yours.</p>
+
+    <h2 id="what-identity-buys">What an identity buys</h2>
+    <p>A real identity engagement is a stack of decisions with the drawing on top. Here is what a $10&ndash;15k system typically contains, and why each line exists:</p>
+    <ul>
+      <li><strong>Positioning work.</strong> Who you are for, who you are against, and the one sentence the whole visual language must make believable. Without it, the rest is decoration.</li>
+      <li><strong>Mark architecture.</strong> Primary logo, secondary lockup, monogram &mdash; because a full wordmark doesn&rsquo;t fit a favicon and a monogram doesn&rsquo;t carry a pitch deck.</li>
+      <li><strong>Color with codes and contrast pairs.</strong> Hex, Pantone, and CMYK equivalents, plus accessible foreground/background pairings your team won&rsquo;t have to test blind.</li>
+      <li><strong>A type system.</strong> Families, a working scale, and &mdash; critically &mdash; licensing status, so the font doesn&rsquo;t become a legal invoice later.</li>
+      <li><strong>Imagery and motion direction.</strong> Rules for photography, illustration, and how things move, so the brand feels the same in a static ad and a product tour.</li>
+      <li><strong>Guidelines as a deliverable.</strong> The rulebook: clearspace, misuse examples, contrast minimums, do/don&rsquo;t pairs. This document is the difference between a brand and a memory.</li>
+      <li><strong>Launch assets.</strong> Social kit, deck template, email signature, favicon &mdash; the system arrives already wearing itself.</li>
+    </ul>
+
+    <figure>
+      <img src="https://picsum.photos/seed/asp-blog-studio/1200/640" width="1200" height="640" alt="Brand strategist presenting identity variations and color systems to founders" loading="lazy" decoding="async" class="w-full">
+      <figcaption>Fig. 02 — An identity review: territories first, marks second, decoration last</figcaption>
+    </figure>
+
+    <h2 id="compounding">The compounding math</h2>
+    <p>The financial case for identity is not that it costs less &mdash; it costs more, up front, by an order of magnitude. The case is that <strong>every future asset gets cheaper</strong>. Concrete example: a company with 40 brand touchpoints needs a new landing page, new packaging, and a new ad set this quarter. Without a system, each is invented from scratch &mdash; a designer re-derives fonts, colors, spacing, and tone every time, at full price, with drift. With a governed identity, each one is assembly: the rules answer ninety percent of the questions before the brief is written, and the creative budget goes entirely into the ten percent that differentiates.</p>
+    <p>Run the same math on a rebrand and the gap widens further: without a system, a rebrand re-designs all 40 touchpoints; with tokenized color and type, it re-maps values and ships in weeks. The identity premium you pay once becomes a discount you collect forever.</p>
+    <div class="callout">
+      <svg class="callout-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 18 10 12l4 4 6-7" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 13V9h-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <p><strong>Rule of compounding:</strong> the second asset costs half the first, and the tenth costs a tenth &mdash; but only if the first one came with rules. A drawing has no compound interest; every asset at full price, forever.</p>
+    </div>
+
+    <h2 id="when-logo-is-enough">When a logo is enough</h2>
+    <p>An honest strategist says this out loud: there are stages where a full identity is wasted money, and buying it early is how cautious founders burn cash pretending to be prudent. A logo alone &mdash; even a cheap one &mdash; is genuinely the right purchase when:</p>
+    <ul>
+      <li>You&rsquo;re pre-seed and still validating the offer &mdash; the risk isn&rsquo;t looking inconsistent, it&rsquo;s building something nobody wants.</li>
+      <li>You&rsquo;re a local business with referral-driven demand &mdash; your reputation is the identity; the mark just needs to be clean and legible on a van.</li>
+      <li>You&rsquo;re testing a channel or sub-brand that may not survive the quarter &mdash; systems are for things you plan to keep.</li>
+    </ul>
+    <div class="callout">
+      <svg class="callout-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4 21 19H3z" stroke-linejoin="round"/><path d="M12 10v4M12 16.5h.01" stroke-linecap="round"/></svg>
+      <p><strong>Timing beats taste:</strong> buy the identity when the offer is validated and the audience is growing &mdash; not before the market has agreed to exist. Spend earlier on distribution; spend later on consistency.</p>
+    </div>
+
+    <h2 id="evaluating">Evaluating the quotes</h2>
+    <p>Once you know the anatomy, a proposal tells you in one read which product you&rsquo;re being sold. A real identity proposal contains, at minimum:</p>
+    <ol>
+      <li><strong>A strategy phase with its own timeline</strong> &mdash; interviews, competitive teardown, positioning territory work, before any marks are drawn.</li>
+      <li><strong>Two or three visual territories</strong> &mdash; genuinely different directions, not three arrangements of the same idea.</li>
+      <li><strong>Guidelines listed as a deliverable</strong> &mdash; with a page-count or section outline, not a vague &ldquo;brand book.&rdquo;</li>
+      <li><strong>File handover specifics</strong> &mdash; vector sources, print and web color modes, favicon and social crops, and font licensing spelled out.</li>
+    </ol>
+    <p>My colleagues on the engineering side audit quotes with a checklist; the brand version is less scientific and just as merciless:</p>
+    <pre class="code-block" data-lang="bash"><code data-code>#!/usr/bin/env bash
+# what-did-you-actually-buy.sh — audit any brand quote's deliverables
+checklist=(
+  "strategy-memo.pdf"                      # positioning, audience, why — the "why"
+  "marks: primary | secondary | monogram"  # architecture, not one drawing
+  "color-codes.md"                         # hex, Pantone, CMYK + accessible pairs
+  "type-system.md"                         # families, scale — and who owns the license
+  "guidelines-v1.pdf"                      # clearspace, misuse, contrast, motion rules
+  "launch-kit.zip"                         # social, deck, email, favicon — ready to ship
+)
+
+missing=0
+for item in "${checklist[@]}"; do
+  [ -f "$item" ] || { echo "missing: $item" &gt;&amp;2; missing=$((missing + 1)); }
+done
+
+if [ "$missing" -gt 2 ]; then
+  echo "verdict: you bought a drawing, not an identity"
+else
+  echo "verdict: decisions, documented — this one compounds"
+fi</code></pre>
+
+    <h2 id="the-choice">The choice: decisions vs. drawings</h2>
+    <p>Strip everything else away and the purchase decision is this: a $300 logo is one decision (what the mark looks like); an identity is several hundred decisions (how the brand behaves everywhere), made once, professionally, while they&rsquo;re still cheap to make. The comparison across market tiers:</p>
+    <div class="card-glass my-8 overflow-x-auto p-2 sm:p-4">
+      <table class="table-compare min-w-[42rem]">
+        <caption class="sr-only">Comparison of a $300 logo, a mid-tier logo package, and a full identity system</caption>
+        <thead><tr><th scope="col">Dimension</th><th scope="col">$300 logo</th><th scope="col">Mid-tier logo package</th><th scope="col">Full identity system</th></tr></thead>
+        <tbody>
+          <tr><td>What you receive</td><td>One drawing, one format</td><td>Logo + files + basic variants</td><td>Strategy, marks, color, type, rules, launch kit</td></tr>
+          <tr><td>Strategy work</td><td>None</td><td>Light briefing call</td><td>Dedicated phase with territories</td></tr>
+          <tr><td>Usage rules</td><td>None</td><td>One-page sheet</td><td>Guidelines as a core deliverable</td></tr>
+          <tr><td>Scalability</td><td>Breaks at touchpoint #2</td><td>Breaks at touchpoint #10</td><td>Compounds with every asset</td></tr>
+          <tr><td>Rebrand later</td><td>Full redesign, full price</td><td>Mostly full price</td><td>Re-map values, ship in weeks</td></tr>
+          <tr><td>Suitable stage</td><td>Pre-seed, local, testing</td><td>Seed, single channel</td><td>Validated offer, growing audience</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <blockquote>
+      A logo derives meaning from the quality of the thing it symbolizes &mdash; not the other way around. A great mark cannot save a company with no story, and a mediocre one cannot sink a company that does.
+      <cite>— Paraphrasing Paul Rand, Design, Form and Chaos</cite>
+    </blockquote>
+
+    <figure>
+      <img src="https://picsum.photos/seed/asp-blog-guidelines/1200/640" width="1200" height="640" alt="Printed brand guidelines book open beside logo variations on paper" loading="lazy" decoding="async" class="w-full">
+      <figcaption>Fig. 03 — The rules page nobody reads &mdash; until it saves them a week of guessing</figcaption>
+    </figure>
+    <hr>
+    <p><strong>The takeaway:</strong> the question is never &ldquo;how much should a logo cost?&rdquo; It is &ldquo;how many decisions do I want made already when the next asset lands?&rdquo; Buy the drawing when you&rsquo;re still searching for the business; buy the system when the business has found you. And whichever quote lands on your desk &mdash; run the checklist. The cheapest thing it can be is decoration; the most expensive thing it can be is a decision you&rsquo;ll pay for again, on every asset, for years.</p>
+  </article>
+</div>
+
+<!-- ===== TAGS + SHARE ===== -->
+<div class="shell grid gap-8 border-t border-line py-10 lg:grid-cols-12">
+  <div class="flex flex-wrap items-center gap-2 lg:col-span-6">
+    <span class="mr-2 font-mono text-[10px] uppercase tracking-[0.24em] text-mist/70">Tags</span>
+    <a href="../blog.html" class="chip">logo</a>
+    <a href="../blog.html" class="chip">identity</a>
+    <a href="../blog.html" class="chip">strategy</a>
+    <a href="../blog.html" class="chip">business</a>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 lg:col-span-6 lg:justify-end">
+    <span class="mr-2 font-mono text-[10px] uppercase tracking-[0.24em] text-mist/70">Share</span>
+    <button type="button" data-copy="link" class="btn-ghost !px-4 !py-2.5 text-xs"><span data-copy-label>Copy link</span></button>
+    <a href="https://x.com/intent/tweet?text=Logo%20vs.%20Brand%20Identity%3A%20The%20Difference%20Costs%20Founders%20Money&amp;url=https%3A%2F%2Fallsyncpro.com%2Fblog%2Fpost-4.html" rel="noopener" target="_blank" class="btn-ghost !px-4 !py-2.5 text-xs" aria-label="Share on X">X</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fallsyncpro.com%2Fblog%2Fpost-4.html" rel="noopener" target="_blank" class="btn-ghost !px-4 !py-2.5 text-xs" aria-label="Share on LinkedIn">LinkedIn</a>
+    <a href="https://wa.me/?text=Logo%20vs.%20Brand%20Identity%3A%20The%20Difference%20Costs%20Founders%20Money%20https%3A%2F%2Fallsyncpro.com%2Fblog%2Fpost-4.html" rel="noopener" target="_blank" class="btn-ghost !px-4 !py-2.5 text-xs" aria-label="Share on WhatsApp">WhatsApp</a>
+  </div>
+</div>
+
+<!-- ===== AUTHOR BIO ===== -->
+<section class="shell py-10" aria-label="About the author">
+  <div class="card-glass flex flex-col gap-6 p-7 sm:flex-row sm:items-center sm:p-8" data-reveal>
+    <img src="https://picsum.photos/seed/asp-avatar-yuki/160/160" width="88" height="88" alt="Portrait of Yuki Tanaka" loading="lazy" decoding="async" class="size-22 flex-none rounded-full border border-line object-cover">
+    <div>
+      <p class="font-mono text-[10px] uppercase tracking-[0.24em] text-mist/70">Written by</p>
+      <h2 class="mt-1 font-display text-xl font-semibold text-chalk">Yuki Tanaka</h2>
+      <p class="mt-2 max-w-2xl text-sm leading-relaxed text-mist">Yuki spent 12 years building identities across Tokyo and London studios before joining AllSyncPro, and believes identity is strategy made visible. She has guided more than 60 founders through their first real brand decision &mdash; and talked a gratifying number of them out of buying the wrong thing.</p>
+      <a href="../about.html" class="link-arrow mt-3 text-sm">Meet the people behind the work
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMMENTS (STATIC UI) ===== -->
+<section class="shell py-10" aria-labelledby="comments-heading">
+  <h2 id="comments-heading" class="font-display text-2xl font-semibold tracking-tight text-chalk" data-reveal>Discussion <span class="font-mono text-sm text-mist/60">(3)</span></h2>
+
+  <ol class="mt-8 grid gap-5">
+    <li class="card-glass p-6" data-reveal>
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/seed/asp-avatar-omar/72/72" width="36" height="36" alt="Portrait of Omar Haddad" loading="lazy" decoding="async" class="size-9 rounded-full border border-line object-cover">
+        <div><p class="text-sm font-semibold text-chalk">Omar Haddad</p><p class="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/60">Head of Growth — VelaCommerce · 1 day ago</p></div>
+      </div>
+      <p class="mt-4 text-[15px] leading-relaxed text-mist">The compounding section is the part founders scroll past. Our &ldquo;cheap&rdquo; rebrand without a system ended up costing four times the identity&rsquo;s price just cleaning up touchpoints &mdash; every one of them improvised by someone different.</p>
+    </li>
+    <li class="card-glass p-6" data-reveal>
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/seed/asp-avatar-lucy/72/72" width="36" height="36" alt="Portrait of Lucy Chen" loading="lazy" decoding="async" class="size-9 rounded-full border border-line object-cover">
+        <div><p class="text-sm font-semibold text-chalk">Lucy Chen</p><p class="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/60">Freelance Frontend Developer · 4 days ago</p></div>
+      </div>
+      <p class="mt-4 text-[15px] leading-relaxed text-mist">The bash checklist made me laugh, then made me audit the last brand quote I forwarded to a client. Missing: guidelines. Again. Every time. Guess what the next invoice to that client will contain.</p>
+    </li>
+    <li class="card-glass p-6" data-reveal>
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/seed/asp-avatar-raj/72/72" width="36" height="36" alt="Portrait of Raj Patel" loading="lazy" decoding="async" class="size-9 rounded-full border border-line object-cover">
+        <div><p class="text-sm font-semibold text-chalk">Raj Patel</p><p class="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/60">Founder — Parcel &amp; Pine · 1 week ago</p></div>
+      </div>
+      <p class="mt-4 text-[15px] leading-relaxed text-mist">Needed the &ldquo;when a logo is enough&rdquo; honesty. Pre-seed, $80 mark from a friend, correct answer. By Series A the identity system paid for itself in the investor deck alone &mdash; nobody had to ask what our font was.</p>
+    </li>
+  </ol>
+
+  <form class="card-glass mt-8 p-6 sm:p-8" data-reveal aria-label="Leave a comment">
+    <label for="comment" class="field-label">Join the discussion</label>
+    <textarea id="comment" name="comment" rows="3" placeholder="Tell us where you stand on the $300 logo — comments are moderated for relevance, never for disagreement." class="field resize-y"></textarea>
+    <div class="mt-4 flex items-center justify-between gap-4">
+      <p class="text-xs text-mist/60">Demo comment form — connect your endpoint to go live.</p>
+      <button type="submit" class="btn-primary !px-6 !py-3 text-sm"><span class="btn-label">Post comment</span></button>
+    </div>
+  </form>
+</section>
+
+<!-- ===== PREV / NEXT ===== -->
+<nav class="shell grid gap-4 border-t border-line py-12 sm:grid-cols-2" aria-label="Post navigation">
+  <a href="../blog/post-3.html" class="group card-glass card-hover p-6" data-reveal>
+    <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-mist/70">← Previous</p>
+    <p class="mt-2 font-display text-lg font-semibold text-chalk transition-colors duration-300 group-hover:text-plum">Design Systems That Survive Contact With Reality</p>
+  </a>
+  <a href="../blog/post-5.html" class="group card-glass card-hover p-6 sm:text-right" data-reveal>
+    <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-mist/70">Next →</p>
+    <p class="mt-2 font-display text-lg font-semibold text-chalk transition-colors duration-300 group-hover:text-plum">The First 3 Seconds: Engineering a Hero That Converts</p>
+  </a>
+</nav>
+
+<!-- ===== RELATED POSTS ===== -->
+<section class="shell pb-16" aria-labelledby="related-posts">
+  <h2 id="related-posts" class="font-mono text-[11px] uppercase tracking-[0.28em] text-mist/70" data-reveal>Related reading</h2>
+  <div class="mt-7 grid gap-6 md:grid-cols-3" data-reveal-group="110">
+    <article class="group" data-reveal>
+      <a href="../blog/post-1.html" class="block">
+        <span class="block overflow-hidden rounded-xl border border-line">
+          <img src="https://picsum.photos/seed/asp-blog-20k/720/450" width="720" height="450" alt="Project cost breakdown whiteboard with sticky notes" loading="lazy" decoding="async" class="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-engineered group-hover:scale-[1.05]">
+        </span>
+        <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-plum">Business</p>
+        <h3 class="mt-2 font-display text-lg font-semibold leading-snug text-chalk transition-colors duration-300 group-hover:text-plum">Anatomy of a $20k Website: Where the Money Actually Goes</h3>
+      </a>
+    </article>
+    <article class="group" data-reveal>
+      <a href="../blog/post-5.html" class="block">
+        <span class="block overflow-hidden rounded-xl border border-line">
+          <img src="https://picsum.photos/seed/asp-blog-hero3s/720/450" width="720" height="450" alt="Designer reviewing hero section wireframes on a large monitor" loading="lazy" decoding="async" class="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-engineered group-hover:scale-[1.05]">
+        </span>
+        <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-plum">Web Design</p>
+        <h3 class="mt-2 font-display text-lg font-semibold leading-snug text-chalk transition-colors duration-300 group-hover:text-plum">The First 3 Seconds: Engineering a Hero That Converts</h3>
+      </a>
+    </article>
+    <article class="group" data-reveal>
+      <a href="../blog/post-3.html" class="block">
+        <span class="block overflow-hidden rounded-xl border border-line">
+          <img src="https://picsum.photos/seed/asp-blog-systems/720/450" width="720" height="450" alt="Component library board with color tokens and type scales" loading="lazy" decoding="async" class="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-engineered group-hover:scale-[1.05]">
+        </span>
+        <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-plum">Development</p>
+        <h3 class="mt-2 font-display text-lg font-semibold leading-snug text-chalk transition-colors duration-300 group-hover:text-plum">Design Systems That Survive Contact With Reality</h3>
+      </a>
+    </article>
+  </div>
+</section>
+
+</main>
+<!-- ===== SHARED PRE-FOOTER CTA (injected on content pages) ===== -->
+<section class="relative overflow-hidden border-t border-line" aria-labelledby="cta-heading">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="absolute left-[8%] top-[-30%] h-[26rem] w-[26rem] glow-violet blur-3xl"></div>
+    <div class="absolute bottom-[-40%] right-[4%] h-[24rem] w-[24rem] glow-cyan blur-3xl"></div>
+    <div class="absolute inset-0 bg-gridlines opacity-[0.35] [mask-image:radial-gradient(70%_70%_at_50%_50%,black,transparent)]"></div>
+  </div>
+  <div class="shell relative flex flex-col items-center gap-7 py-24 text-center md:py-32">
+    <p class="eyebrow" data-reveal data-scramble>Ready when you are</p>
+    <h2 id="cta-heading" class="max-w-4xl font-display text-display-xl font-semibold tracking-tight text-chalk" data-reveal data-split="words">
+      Your next chapter deserves <span class="text-gradient">better gear.</span>
+    </h2>
+    <p class="max-w-xl text-lg leading-relaxed text-mist" data-reveal>
+      Book a free 30-minute discovery call. We&rsquo;ll map your goals, flag the fastest wins, and tell you honestly whether we&rsquo;re the right studio for the job.
+    </p>
+    <div class="mt-2 flex flex-col items-center gap-4 sm:flex-row" data-reveal>
+      <a href="../contact.html" data-magnetic="0.3" class="btn-primary !px-8 !py-4 text-base">
+        <span class="btn-label">Start a Project</span>
+        <svg class="btn-arrow" width="15" height="15" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="../portfolio.html" class="btn-ghost !px-8 !py-4 text-base">See the proof</a>
+    </div>
+    <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.26em] text-mist/70" data-reveal>
+      <span class="inline-flex items-center gap-2"><span class="size-1.5 rounded-full bg-cyan anim-pulse-dot" aria-hidden="true"></span>Reply within 48 hours — usually same day</span>
+    </p>
+  </div>
+</section>
+<!-- ===================== FOOTER ===================== -->
+<footer class="relative overflow-hidden border-t border-line bg-surface/40">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="absolute -top-40 left-1/2 h-96 w-[60rem] -translate-x-1/2 glow-violet opacity-60 blur-3xl"></div>
+    <div class="absolute inset-0 bg-dots [mask-image:linear-gradient(180deg,black,transparent_65%)] opacity-70"></div>
+  </div>
+
+  <div class="shell relative">
+    <!-- Oversized CTA block -->
+    <div class="flex flex-col items-start gap-8 border-b border-line py-20 lg:flex-row lg:items-end lg:justify-between lg:py-24">
+      <div class="max-w-3xl">
+        <p class="eyebrow" data-scramble>Final call</p>
+        <h2 class="mt-5 font-display text-display-lg font-semibold tracking-tight text-chalk" data-split="words">
+          Let&rsquo;s build something <span class="text-gradient">in sync.</span>
+        </h2>
+        <p class="mt-5 max-w-xl text-lg leading-relaxed text-mist">
+          Tell us where your brand needs to be. We&rsquo;ll reply within 48 hours — usually the same day — with honest next steps, a fit assessment, and a first sketch of the road ahead.
+        </p>
+      </div>
+      <div class="flex flex-col items-start gap-4">
+        <a href="../contact.html" data-magnetic="0.3" class="btn-primary !px-8 !py-4 text-base">
+          <span class="btn-label">Start a Project</span>
+          <svg class="btn-arrow" width="15" height="15" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="mailto:hello@allsyncpro.com" class="link-arrow text-sm">hello@allsyncpro.com</a>
+      </div>
+    </div>
+
+    <!-- Sitemap columns -->
+    <div class="grid grid-cols-2 gap-x-8 gap-y-12 py-16 md:grid-cols-4 lg:grid-cols-6">
+      <div class="col-span-2">
+        <a href="../index.html" class="flex items-center gap-3" aria-label="AllSyncPro — home">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="aspG2" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6E4BFF"/><stop offset="1" stop-color="#22D3EE"/>
+              </linearGradient>
+            </defs>
+            <circle cx="12.5" cy="16" r="8.5" stroke="url(#aspG2)" stroke-width="1.5"/>
+            <circle cx="19.5" cy="16" r="8.5" stroke="url(#aspG2)" stroke-width="1.5" opacity=".55"/>
+            <circle cx="16" cy="16" r="2.6" fill="url(#aspG2)"/>
+          </svg>
+          <span class="font-display text-lg font-semibold tracking-tight text-chalk">allsync<span class="text-gradient">pro</span></span>
+        </a>
+        <p class="mt-5 max-w-xs text-sm leading-relaxed text-mist">
+          A design &amp; engineering studio for founders who want strategy, identity, interface, and code moving as one system.
+        </p>
+        <form data-newsletter class="mt-7 flex max-w-sm items-center gap-2" novalidate>
+          <label for="footer-newsletter" class="sr-only">Email address for the studio newsletter</label>
+          <input id="footer-newsletter" type="email" name="email" required placeholder="you@company.com" autocomplete="email" class="field !rounded-full !py-2.5 text-sm">
+          <button type="submit" class="btn-ghost flex-none !px-4 !py-2.5 text-sm">Join</button>
+        </form>
+        <p class="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-mist/60">One email a month. Zero noise.</p>
+      </div>
+
+      <nav aria-label="Services">
+        <h3 class="font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Services</h3>
+        <ul class="mt-5 grid gap-3 text-sm">
+          <li><a href="../services/web-design.html" class="text-mist transition-colors hover:text-chalk">Web Design</a></li>
+          <li><a href="../services/web-development.html" class="text-mist transition-colors hover:text-chalk">Web Development</a></li>
+          <li><a href="../services/graphic-design.html" class="text-mist transition-colors hover:text-chalk">Graphic Design</a></li>
+          <li><a href="../services/logo-brand-identity.html" class="text-mist transition-colors hover:text-chalk">Logo &amp; Brand Identity</a></li>
+          <li><a href="../services/banner-ad-creative.html" class="text-mist transition-colors hover:text-chalk">Banner &amp; Ad Creative</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Studio">
+        <h3 class="font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Studio</h3>
+        <ul class="mt-5 grid gap-3 text-sm">
+          <li><a href="../about.html" class="text-mist transition-colors hover:text-chalk">About us</a></li>
+          <li><a href="../portfolio.html" class="text-mist transition-colors hover:text-chalk">Case studies</a></li>
+          <li><a href="../blog.html" class="text-mist transition-colors hover:text-chalk">Journal</a></li>
+          <li><a href="../pricing.html" class="text-mist transition-colors hover:text-chalk">Pricing</a></li>
+          <li><a href="../contact.html" class="text-mist transition-colors hover:text-chalk">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Resources">
+        <h3 class="font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Resources</h3>
+        <ul class="mt-5 grid gap-3 text-sm">
+          <li><a href="../faq.html" class="text-mist transition-colors hover:text-chalk">FAQ</a></li>
+          <li><a href="../blog/post-1.html" class="text-mist transition-colors hover:text-chalk">Anatomy of a $20k site</a></li>
+          <li><a href="../blog/post-5.html" class="text-mist transition-colors hover:text-chalk">The first 3 seconds</a></li>
+          <li><a href="../privacy-policy.html" class="text-mist transition-colors hover:text-chalk">Privacy policy</a></li>
+          <li><a href="../terms.html" class="text-mist transition-colors hover:text-chalk">Terms of service</a></li>
+        </ul>
+      </nav>
+
+      <div class="col-span-2 md:col-span-1">
+        <h3 class="font-mono text-[10px] uppercase tracking-[0.28em] text-mist/70">Contact</h3>
+        <ul class="mt-5 grid gap-3 text-sm text-mist">
+          <li><a href="mailto:hello@allsyncpro.com" class="transition-colors hover:text-chalk">hello@allsyncpro.com</a></li>
+          <li><a href="tel:+442080891200" class="transition-colors hover:text-chalk">+44 20 8089 1200</a></li>
+          <li class="leading-relaxed">48 Warren Street<br>London W1T 5BB, UK</li>
+          <li class="font-mono text-xs text-mist/70">Mon–Fri · 09:00–18:00 GMT</li>
+        </ul>
+        <div class="mt-6 flex gap-2">
+          <a href="https://x.com" rel="noopener" aria-label="AllSyncPro on X" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L2.5 2h6.4l4.4 5.9L18.9 2Zm-1.1 18h1.7L7.9 3.7H6.1L17.8 20Z"/></svg>
+          </a>
+          <a href="https://linkedin.com" rel="noopener" aria-label="AllSyncPro on LinkedIn" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9Z"/></svg>
+          </a>
+          <a href="https://dribbble.com" rel="noopener" aria-label="AllSyncPro on Dribbble" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M5.5 6.5c4 4.4 8.9 6 13.9 6M8.5 3.3c2.7 4.9 4.2 9.6 4.6 16.6M20.6 13.9c-5.4-.6-9.7.8-13.3 4.8"/></svg>
+          </a>
+          <a href="https://github.com" rel="noopener" aria-label="AllSyncPro on GitHub" class="grid size-10 place-items-center rounded-full border border-line text-mist transition-colors hover:border-plum/60 hover:text-chalk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Giant animated wordmark -->
+  <div class="shell-full select-none" aria-hidden="true">
+    <div class="wordmark-giant whitespace-nowrap text-center text-[13.5vw] leading-[0.78]" data-parallax="0.08">ALLSYNCPRO</div>
+  </div>
+
+  <!-- Legal row -->
+  <div class="shell">
+    <div class="flex flex-col items-start justify-between gap-4 border-t border-line py-7 text-xs text-mist/80 sm:flex-row sm:items-center">
+      <p>© <span data-year>2026</span> AllSyncPro Ltd. All rights reserved. Company No. 11284557.</p>
+      <p class="font-mono uppercase tracking-[0.22em]">Designed &amp; engineered in sync</p>
+      <div class="flex items-center gap-5">
+        <a href="../privacy-policy.html" class="transition-colors hover:text-chalk">Privacy</a>
+        <a href="../terms.html" class="transition-colors hover:text-chalk">Terms</a>
+        <a href="../sitemap.xml" class="transition-colors hover:text-chalk">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ===== BACK TO TOP ===== -->
+<button type="button" data-backtotop data-visible="false" aria-label="Back to top" class="fixed bottom-6 right-6 z-[150] grid size-12 place-items-center rounded-full border border-line bg-elevated/85 text-chalk backdrop-blur-md transition-all duration-500 ease-engineered hover:border-plum/60">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5"/></svg>
+</button>
+
+<!-- ===== COOKIE / CONSENT BAR ===== -->
+<div data-cookiebar data-visible="false" role="region" aria-label="Cookie consent" class="fixed bottom-4 left-1/2 z-[150] w-[min(92vw,54rem)] transition-all duration-[600ms] ease-engineered">
+  <div class="card-glass flex flex-col items-start gap-4 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+    <p class="text-sm leading-relaxed text-mist">
+      We use a handful of privacy-friendly cookies to remember your theme and measure anonymous traffic. No ad trackers, no data resale —
+      <a href="../privacy-policy.html" class="text-plum underline decoration-plum/40 underline-offset-2 hover:decoration-plum">read the policy</a>.
+    </p>
+    <div class="flex flex-none gap-3">
+      <button type="button" data-cookie-accept class="btn-primary !px-5 !py-2.5 text-sm"><span class="btn-label">Accept</span></button>
+      <button type="button" data-cookie-accept class="btn-ghost !px-5 !py-2.5 text-sm">Essential only</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOASTS ===== -->
+<div data-toasts class="fixed bottom-6 left-1/2 z-[210] flex w-[min(92vw,26rem)] -translate-x-1/2 flex-col gap-2"></div>
+
+<!-- ===== SCRIPTS (CDN, optional by design — every feature degrades) ===== -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script type="module" src="../assets/js/main.js"></script>
+
+</body>
+</html>

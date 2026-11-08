@@ -1,0 +1,31 @@
+{
+  "name": "AllSyncPro \u2014 Design, Code & Brand, In Sync",
+  "short_name": "AllSyncPro",
+  "description": "A full-service digital studio uniting strategy, identity, interface, and engineering into one synchronized system.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#06070A",
+  "theme_color": "#06070A",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

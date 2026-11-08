@@ -1,0 +1,15 @@
+{
+  "name": "allsyncpro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AllSyncPro — premium agency website. Static HTML + Tailwind + vanilla ES modules. Runs from the CDN setup with zero build; this package exists for the optional production Tailwind CLI build.",
+  "scripts": {
+    "dev": "python -m http.server 8080",
+    "serve": "npx serve .",
+    "build:css": "tailwindcss -i assets/css/tailwind.input.css -o assets/css/tailwind.built.css --minify",
+    "build:css:watch": "tailwindcss -i assets/css/tailwind.input.css -o assets/css/tailwind.built.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.16"
+  }
+}
